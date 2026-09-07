@@ -1,0 +1,2105 @@
+{
+ "sheet": "LME Loan Type",
+ "rows": [
+  {
+   "row": 1,
+   "values": [
+    "Prepared By",
+    "Subah Tasnim Shiary",
+    null,
+    "Total Test Cases",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 2,
+   "values": [
+    "Executed By",
+    "Subah Tasnim Shiary",
+    null,
+    "Passed",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 3,
+   "values": [
+    "Updated On",
+    "2026-08-28 00:00:00",
+    null,
+    "Failed",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 4,
+   "values": [
+    "Time est",
+    "Initial testing:",
+    null,
+    "Untested",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 5,
+   "values": [
+    null,
+    "Bugfix testing:",
+    null,
+    "To be tested",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 6,
+   "values": [
+    "common preconditions",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 7,
+   "values": [
+    "navigation",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 8,
+   "values": [
+    "Lending - Loan Type",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 9,
+   "values": [
+    "Common Preconditions",
+    null,
+    "1. User is signed in to Sage Intacct.\n2. The correct Lending Management or Depository Management entity is selected.\n3. The module is enabled for the company.\n4. The user has the permission required for the scenario.\n5. Required master/configuration records are active and available.",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 11,
+   "values": [
+    "Navigation: Applications > Lending Management > Loan type | Client baseline | 124 test cases | Updated 2026-08-29",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 13,
+   "values": [
+    "Test Case ID",
+    "Test Scenario",
+    "Preconditions",
+    "Test Data",
+    "Test Steps",
+    "Expected Result",
+    "Requirement/Jira Reference",
+    "IS Automated",
+    "Status",
+    "Comments"
+   ]
+  },
+  {
+   "row": 14,
+   "values": [
+    "LISTER  (40 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 15,
+   "values": [
+    "LT-001",
+    "Page title is 'Loan types'",
+    "Refer to Common Preconditions above.",
+    "Loan type record exists in the list (e.g. Name: QA Non-Revolving Loan Type).",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: The page heading (H1) reads \"Loan types\".",
+    "The page heading (H1) reads \"Loan types\".",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 16,
+   "values": [
+    "LT-002",
+    "Verify the lister grid displays the documented columns",
+    "Refer to Common Preconditions above.",
+    "N/A (default lister view, no configuration changes).",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Observe the columns shown in the lister grid by default\n4. Confirm that: The lister grid displays the following columns by default: Loan type, Interest calculation method, Description.",
+    "The lister grid displays the following columns by default: Loan type, Interest calculation method, Description.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 17,
+   "values": [
+    "LT-003",
+    "Verify no column is sorted by default",
+    "Refer to Common Preconditions above.",
+    "N/A (default lister view, no sorting applied).",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Observe the column headers for a sort indicator (arrow icon)\n4. Confirm that: No column header shows a sort arrow/indicator by default; the grid loads in its natural/unsorted order.",
+    "No column header shows a sort arrow/indicator by default; the grid loads in its natural/unsorted order.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 18,
+   "values": [
+    "LT-004",
+    "Verify Loan type is a drillable field that routes to the View loan type screen",
+    "Refer to Common Preconditions above.",
+    "An existing record with Loan type = QA Non-Revolving Loan Type.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the value in the Loan type column for an existing row\n4. Confirm that: Clicking the Loan type value navigates to the View loan type screen for that record.",
+    "Clicking the Loan type value navigates to the View loan type screen for that record.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 19,
+   "values": [
+    "LT-005",
+    "Verify the '+Create' button is present and functional",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Locate the '+Create' button at the top right of the lister page and click it\n4. Confirm that: The '+Create' button is located at the top right of the lister page, and clicking it redirects to the 'Create loan type' page.",
+    "The '+Create' button is located at the top right of the lister page, and clicking it redirects to the 'Create loan type' page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 20,
+   "values": [
+    "LT-006",
+    "Verify the lister view-selection dropdown functionality",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the view-selection dropdown at the top left of the lister and inspect its contents\n4. Select a different view from the list\n5. Confirm that: The dropdown opens a list with a 'Search for view' field, a 'System views' section (including 'All'), and a 'User views' section; selecting any view updates the lister to reflect that view.",
+    "The dropdown opens a list with a 'Search for view' field, a 'System views' section (including 'All'), and a 'User views' section; selecting any view updates the lister to reflect that view.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 21,
+   "values": [
+    "LT-007",
+    "Verify the Split view / List view toggle",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the Split view icon\n4. Click the List view icon\n5. Confirm that: Split view splits the screen into the lister on the left and the record detail on the right; List view shows only the lister in full screen.",
+    "Split view splits the screen into the lister on the left and the record detail on the right; List view shows only the lister in full screen.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 22,
+   "values": [
+    "LT-008",
+    "Verify the 'Filters' button opens the Advanced filter modal",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the 'Filters' button at the top right of the lister\n4. Confirm that: A modal titled 'Advanced filter' opens containing Field/Operator/Value/Apply-criteria columns, Apply and Cancel buttons, and per-row '+' (add) and '-' (remove) controls, with no filters selected by default.",
+    "A modal titled 'Advanced filter' opens containing Field/Operator/Value/Apply-criteria columns, Apply and Cancel buttons, and per-row '+' (add) and '-' (remove) controls, with no filters selected by default.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 23,
+   "values": [
+    "LT-009",
+    "Verify the Advanced filter 'Apply' button applies and persists filter changes",
+    "Refer to Common Preconditions above.",
+    "Filter row: Field = Loan type, Operator = Contains, Value = QA.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click 'Filters' to open the Advanced filter modal\n4. Set Field to 'Loan type', Operator to 'Contains', Value to 'QA', then click Apply\n5. Reopen the Advanced filter modal\n6. Confirm that: The modal closes, the list updates to reflect the filter changes, and reopening Advanced filters shows the previously applied filters persisted; rows left without any Field/Operator/Value are ignored.",
+    "The modal closes, the list updates to reflect the filter changes, and reopening Advanced filters shows the previously applied filters persisted; rows left without any Field/Operator/Value are ignored.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 24,
+   "values": [
+    "LT-010",
+    "Verify column filters and Advanced filters stay in sync",
+    "Refer to Common Preconditions above.",
+    "Column filter value: 'QA' entered on the Loan type column header filter input.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Enter 'QA' in the Loan type column header's filter input and press Enter\n4. Open the Advanced filter modal and check whether the same filter appears there\n5. Add or edit a filter directly inside the Advanced filter modal and click Apply\n6. Confirm that: Filters applied from a column filter input appear in the Advanced filter modal, and filters added/edited in Manage view/Advanced filter are reflected back in the column filter inputs.",
+    "Filters applied from a column filter input appear in the Advanced filter modal, and filters added/edited in Manage view/Advanced filter are reflected back in the column filter inputs.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 25,
+   "values": [
+    "LT-011",
+    "Verify column sorting from the column header",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the 'Loan type' column header once\n4. Click the 'Loan type' column header a second time\n5. Confirm that: The first click sorts the column ascending with an upward arrow indicator; the second click sorts descending with a downward arrow indicator.",
+    "The first click sorts the column ascending with an upward arrow indicator; the second click sorts descending with a downward arrow indicator.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 26,
+   "values": [
+    "LT-012",
+    "Verify column sorting from 'Configure column' / 'Column setting' options, including multi-column sort",
+    "Refer to Common Preconditions above.",
+    "Sort row 1: Loan type, Ascending. Sort row 2: Description, Descending.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the column header's Column setting menu and select Sort, choosing 'Loan type' with Ascending order\n4. Click Apply\n5. Add a second sort row for 'Description' with Descending order and click Apply\n6. Confirm that: The grid sorts ascending/descending per the chosen order with the matching arrow indicator; when multiple sort rows are configured, the dataset sorts by the first row's order first, then the second row's order for ties, continuing for any additional rows added.",
+    "The grid sorts ascending/descending per the chosen order with the matching arrow indicator; when multiple sort rows are configured, the dataset sorts by the first row's order first, then the second row's order for ties, continuing for any additional rows added.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 27,
+   "values": [
+    "LT-013",
+    "Verify the 'Column setting' (cog wheel) menu functionality",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the Column setting/cog wheel icon on a column header\n4. Confirm that: A menu appears with Sort ascending, Sort descending, Freeze, Unfreeze all, and Text Wrapping (Clip / Wrap) options.",
+    "A menu appears with Sort ascending, Sort descending, Freeze, Unfreeze all, and Text Wrapping (Clip / Wrap) options.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 28,
+   "values": [
+    "LT-014",
+    "Verify column freeze and unfreeze functionality",
+    "Refer to Common Preconditions above.",
+    "Column to freeze: Loan type.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the Column setting menu on the Loan type column and select Freeze\n4. Scroll the grid horizontally\n5. Open the Column setting menu again and select Unfreeze all\n6. Confirm that: Freezing a column keeps it fixed while the grid scrolls horizontally past it; Unfreeze all restores normal horizontal scrolling for every column.",
+    "Freezing a column keeps it fixed while the grid scrolls horizontally past it; Unfreeze all restores normal horizontal scrolling for every column.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 29,
+   "values": [
+    "LT-015",
+    "Verify column text wrapping (Clip vs Wrap) functionality",
+    "Refer to Common Preconditions above.",
+    "Description column containing a long text value (e.g. \"This is a long description used to validate text clipping and wrapping behavior in the lister grid column\").",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the Column setting menu on the Description column and select Text Wrapping > Clip\n4. Open the Column setting menu again and select Text Wrapping > Wrap\n5. Confirm that: Clip truncates long text with an ellipsis on one line; Wrap displays the full text across multiple lines within the cell.",
+    "Clip truncates long text with an ellipsis on one line; Wrap displays the full text across multiple lines within the cell.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 30,
+   "values": [
+    "LT-016",
+    "Verify the ellipsis (row-level actions) menu for each entry",
+    "Refer to Common Preconditions above.",
+    "An existing loan type record.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the ellipsis menu on a row and select View\n4. Return to the lister, click the ellipsis menu on a row and select Edit\n5. Return to the lister, click the ellipsis menu on a row and select Delete\n6. Confirm that: Clicking View redirects to the View page of the loan type; Edit redirects to the Edit page; Delete opens the delete confirmation modal.",
+    "Clicking View redirects to the View page of the loan type; Edit redirects to the Edit page; Delete opens the delete confirmation modal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 31,
+   "values": [
+    "LT-017",
+    "Verify a record created at the top level is visible from a child entity",
+    "Refer to Common Preconditions above.",
+    "Entity: Top level. Loan type record created there: Name = QA Top-Level Loan Type.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type at the Top level entity\n3. Create a loan type record named 'QA Top-Level Loan Type'\n4. Switch the entity context to a child entity\n5. Navigate to Applications > Lending Management > Loan type and search the lister for 'QA Top-Level Loan Type'\n6. Confirm that: The record created at the top-level entity is visible and drillable from the child entity's lister.",
+    "The record created at the top-level entity is visible and drillable from the child entity's lister.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 32,
+   "values": [
+    "LT-018",
+    "Verify a record created at a child entity is NOT visible from the top level or from a sibling child entity",
+    "Refer to Common Preconditions above.",
+    "Entity: a child entity. Loan type record created there: Name = QA Child-Entity Loan Type.",
+    "1. Sign in to Sage Intacct application\n2. Switch entity context to a child entity and navigate to Applications > Lending Management > Loan type\n3. Create a loan type record named 'QA Child-Entity Loan Type'\n4. Switch entity context to the top level and search the lister for 'QA Child-Entity Loan Type'\n5. Switch entity context to a sibling child entity and search the lister for 'QA Child-Entity Loan Type'\n6. Confirm that: The record created at the child-level entity is not visible from the root/top-level entity's lister, nor from a sibling child entity's lister.",
+    "The record created at the child-level entity is not visible from the root/top-level entity's lister, nor from a sibling child entity's lister.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 33,
+   "values": [
+    "LT-019",
+    "Verify successful bulk delete of one or more selected rows",
+    "Refer to Common Preconditions above.",
+    "Two disposable records not referenced elsewhere: QA Delete Test 1, QA Delete Test 2.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Select the checkboxes for 'QA Delete Test 1' and 'QA Delete Test 2'\n4. Click Delete in the bulk action area and confirm the deletion\n5. Confirm that: All selected records are deleted successfully; the list, row count, and Select-all state update accordingly.",
+    "All selected records are deleted successfully; the list, row count, and Select-all state update accordingly.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 34,
+   "values": [
+    "LT-020",
+    "Verify a proper error message when bulk delete is not fully successful",
+    "Refer to Common Preconditions above.",
+    "One deletable record (QA Delete Test) and one non-deletable record that is currently in use (e.g. QA In-Use Loan Type, referenced by an active loan account).",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Select the checkboxes for both 'QA Delete Test' and 'QA In-Use Loan Type'\n4. Click Delete in the bulk action area and confirm the deletion\n5. Confirm that: A clear, friendly error message states that the in-use record could not be deleted; the deletable record is removed from the list; the Select-all count does not decrease incorrectly, and the Delete button remains clickable.",
+    "A clear, friendly error message states that the in-use record could not be deleted; the deletable record is removed from the list; the Select-all count does not decrease incorrectly, and the Delete button remains clickable.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 35,
+   "values": [
+    "LT-021",
+    "Verify bulk delete reconfirmation/cancellation behavior",
+    "Refer to Common Preconditions above.",
+    "One or more existing records selected.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Select one or more rows and click Delete\n4. In the confirmation dialog, click 'X' to dismiss it\n5. Click Delete again, then click 'Cancel' in the confirmation dialog\n6. Confirm that: The confirmation dialog is displayed before any deletion occurs; dismissing it via X or Cancel leaves the selected rows and Delete button state unchanged, with no records deleted.",
+    "The confirmation dialog is displayed before any deletion occurs; dismissing it via X or Cancel leaves the selected rows and Delete button state unchanged, with no records deleted.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 36,
+   "values": [
+    "LT-022",
+    "Verify the row selector and Count component behavior",
+    "Refer to Common Preconditions above.",
+    "At least 3 existing rows in the lister.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Select 3 rows individually and observe the Count component\n4. Deselect 1 of the 3 rows and observe the Count component\n5. Scroll the grid, then deselect all remaining rows\n6. Confirm that: Rows can be selected/deselected individually; the Count component reflects the number of currently selected rows in real time, decreasing on deselection and showing 0 when all are cleared; previously selected rows remain selected after scrolling.",
+    "Rows can be selected/deselected individually; the Count component reflects the number of currently selected rows in real time, decreasing on deselection and showing 0 when all are cleared; previously selected rows remain selected after scrolling.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 37,
+   "values": [
+    "LT-023",
+    "Verify column filter functionality across all supported text operators (Equals, Not equal to, Contains, Does not contain, Starts with, Ends with, Is blank, Is not blank)",
+    "Refer to Common Preconditions above.",
+    "Loan type column values: 'QA Loan Type A' (exact match), 'QA Loan Type B' (partial match for Contains/Starts with/Ends with), one row with a blank Description value, one row with a non-blank Description value.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the Loan type column filter and apply Equals with 'QA Loan Type A'\n4. Repeat for Not equal to, Contains, Does not contain, Starts with, and Ends with, each with an appropriate value\n5. Open the Description column filter and apply Is blank, then Is not blank\n6. Confirm that: For each operator, the lister correctly narrows to only the rows matching that operator's condition (e.g. Equals shows only exact matches, Contains shows partial matches, Is blank shows only empty values); the search field is hidden for the Is blank / Is not blank operators; filtering is not case-sensitive.",
+    "For each operator, the lister correctly narrows to only the rows matching that operator's condition (e.g. Equals shows only exact matches, Contains shows partial matches, Is blank shows only empty values); the search field is hidden for the Is blank / Is not blank operators; filtering is not case-sensitive.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 38,
+   "values": [
+    "LT-024",
+    "Verify column filter functionality across all supported date operators (Before, After, On or Before, On or After, Range)",
+    "Refer to Common Preconditions above.",
+    "A date column (e.g. Created Date) with values spanning a range, e.g. 01/01/2026 and 03/01/2026; comparison date: 02/01/2026; range: 01/15/2026 to 02/15/2026.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open a date column's filter and apply Before with '02/01/2026'\n4. Repeat for After, On or Before, and On or After, each with '02/01/2026'\n5. Apply Range with '01/15/2026' to '02/15/2026'\n6. Confirm that: For each date operator, the lister correctly narrows to only the rows whose date value satisfies that operator's condition relative to the given date/range.",
+    "For each date operator, the lister correctly narrows to only the rows whose date value satisfies that operator's condition relative to the given date/range.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 39,
+   "values": [
+    "LT-025",
+    "Verify applying filters to multiple columns simultaneously, both pressing Enter each time and pressing Enter only on the last entry",
+    "Refer to Common Preconditions above.",
+    "Loan type filter value: QA. Description filter value: test.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Enter 'QA' in the Loan type column filter input and press Enter, then enter 'test' in the Description column filter input and press Enter\n4. Clear both filters, then enter 'QA' and 'test' into the same two filter inputs and press Enter only after entering the second value\n5. Confirm that: All the column filters are applied correctly together in either interaction pattern, correctly narrowing the list to rows matching every applied filter.",
+    "All the column filters are applied correctly together in either interaction pattern, correctly narrowing the list to rows matching every applied filter.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 40,
+   "values": [
+    "LT-026",
+    "Verify updating and clearing a column filter value updates the list live",
+    "Refer to Common Preconditions above.",
+    "Column filter value: 'QA' applied on the Loan type column, then updated to 'QA Loan Type A'.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Enter 'QA' in the Loan type column filter input and press Enter\n4. Update the value to 'QA Loan Type A' and press Enter\n5. Delete the value from the filter input and press Enter\n6. Confirm that: The list updates to reflect the updated filter value; clearing the filter value and pressing Enter removes that filter and restores the unfiltered rows for that column.",
+    "The list updates to reflect the updated filter value; clearing the filter value and pressing Enter removes that filter and restores the unfiltered rows for that column.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 41,
+   "values": [
+    "LT-027",
+    "Verify the 'Filter by condition' modal (per-column filter icon)",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the filter icon on the Loan type column header\n4. Open the Operator dropdown and inspect the available options\n5. Confirm that: A 'Filter by condition' modal opens containing an Operator dropdown, a Search field, and Apply/Clear buttons; the operator dropdown includes Not equal to, Starts with, Ends with, Contains, Does not contain, Is blank, and Is not blank.",
+    "A 'Filter by condition' modal opens containing an Operator dropdown, a Search field, and Apply/Clear buttons; the operator dropdown includes Not equal to, Starts with, Ends with, Contains, Does not contain, Is blank, and Is not blank.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 42,
+   "values": [
+    "LT-028",
+    "Verify the 'Filter by condition' modal's Apply and Clear buttons",
+    "Refer to Common Preconditions above.",
+    "Operator: Contains. Search value: QA.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the filter icon on the Loan type column header, select Operator 'Contains', enter 'QA' in the Search field, and click Apply\n4. Reopen 'Filter by condition' on the same column and click Clear\n5. Confirm that: Apply correctly applies the configured filter to the lister; Clear resets the operator and search field value in the modal.",
+    "Apply correctly applies the configured filter to the lister; Clear resets the operator and search field value in the modal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 43,
+   "values": [
+    "LT-029",
+    "Verify 'Configure columns' search, selection, and removal of columns",
+    "Refer to Common Preconditions above.",
+    "Search term: Description. Additional column to add: Status. Existing column to remove: Description.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open Configure columns and search for 'Description' in the search field\n4. From the All tab, select the 'Status' column, and deselect the existing 'Description' column\n5. Click Apply\n6. Confirm that: Search returns matching columns (including related-object columns via nested menus); selected columns are added and appear in the Selected tab and in the lister after Apply; deselected columns are removed from the lister after Apply.",
+    "Search returns matching columns (including related-object columns via nested menus); selected columns are added and appear in the Selected tab and in the lister after Apply; deselected columns are removed from the lister after Apply.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 44,
+   "values": [
+    "LT-030",
+    "Verify column reorder from 'Configure columns' and via drag-and-drop persists to the saved view",
+    "Refer to Common Preconditions above.",
+    "A User-defined view: 'QA Test View'.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type and select the 'QA Test View' user-defined view\n3. Open Configure columns and reorder two columns using its drag handles, then click Apply\n4. Drag a column header directly in the grid to reorder it further\n5. Save the view via Manage views > Save\n6. Confirm that: Columns can be reordered both from the Configure columns panel and by dragging column headers directly; the new order is reflected in the lister and persists after the view is posted/saved.",
+    "Columns can be reordered both from the Configure columns panel and by dragging column headers directly; the new order is reflected in the lister and persists after the view is posted/saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 45,
+   "values": [
+    "LT-031",
+    "Verify selecting all available columns from 'Configure columns' saves without error",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open Configure columns and select every available column in the All tab\n4. Click Apply, then save the view via Manage views > Save\n5. Confirm that: All columns can be selected and the view saves successfully without error.",
+    "All columns can be selected and the view saves successfully without error.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 46,
+   "values": [
+    "LT-032",
+    "Verify viewing, editing, and adding a record from the lister",
+    "Refer to Common Preconditions above.",
+    "New record Name: QA New Loan Type; Type: Non-revolving; Interest calculation method: Simple; Description: Client QA loan type.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click an existing record's Loan type link to view it\n4. Return to the lister, click the ellipsis menu on a row and select Edit, change the Description field, and click Save\n5. Return to the lister, click '+Create', enter Name 'QA New Loan Type', Type 'Non-revolving', Interest calculation method 'Simple', Description 'Client QA loan type', add one Principal and one Interest payment priority row, and click Save\n6. Confirm that: The record can be viewed via its link; edited successfully with a success message and the updated data reflected in the list; and added successfully with a success message and the new record appearing in the list.",
+    "The record can be viewed via its link; edited successfully with a success message and the updated data reflected in the list; and added successfully with a success message and the new record appearing in the list.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 47,
+   "values": [
+    "LT-033",
+    "Verify delete functionality and the delete confirmation modal's content",
+    "Refer to Common Preconditions above.",
+    "A deletable record: QA Delete Confirm Test.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click the ellipsis menu on the row for 'QA Delete Confirm Test' and select Delete\n4. Inspect the confirmation modal's title, message, and buttons, then click Delete to confirm\n5. Confirm that: The delete confirmation modal displays an appropriate title, message, and Delete/Cancel buttons; confirming deletes the record and removes it from the list.",
+    "The delete confirmation modal displays an appropriate title, message, and Delete/Cancel buttons; confirming deletes the record and removes it from the list.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 48,
+   "values": [
+    "LT-034",
+    "Verify Manage views: Save, Save as, Rename, Edit, and creating a New view",
+    "Refer to Common Preconditions above.",
+    "View name: QA Manage View Test; renamed to: QA Manage View Renamed.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Apply a filter, then select Manage views > Save\n4. Select Manage views > Save as, enter the name 'QA Manage View Test', and save\n5. Select Manage views > Rename, change the name to 'QA Manage View Renamed', and save\n6. Select Manage views > Edit, change the configuration, and save; then select Manage views > New and create a fresh view\n7. Confirm that: Save persists changes to the current view with a confirmation message; Save as creates a new view under the given name; Rename updates the view's name; Edit opens a modal to update the view's configuration and saves it; New creates a fresh view from the modal with a confirmation toast.",
+    "Save persists changes to the current view with a confirmation message; Save as creates a new view under the given name; Rename updates the view's name; Edit opens a modal to update the view's configuration and saves it; New creates a fresh view from the modal with a confirmation toast.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 49,
+   "values": [
+    "LT-035",
+    "Verify configuring view sharing (Private vs Public) and cross-user visibility",
+    "Refer to Common Preconditions above.",
+    "View name: QA Shared View. Second user: a different user in the same company.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type and create a view named 'QA Shared View'\n3. Select Manage views > Share and set sharing to Private, then check that a lock icon appears; sign in as a second user in the same company and check the view is not visible\n4. Sign back in as the test user, set 'QA Shared View' sharing to Public, then check as the second user that it is now visible\n5. Confirm that: The sharing setting can be toggled between Private and Public, reflected by a lock icon on Private views; a Private view created by one user is not visible to a different user in the same company, while a Public view is.",
+    "The sharing setting can be toggled between Private and Public, reflected by a lock icon on Private views; a Private view created by one user is not visible to a different user in the same company, while a Public view is.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 50,
+   "values": [
+    "LT-036",
+    "Verify list pagination controls and page-size selection",
+    "Refer to Common Preconditions above.",
+    "More than 100 loan type records exist in the list.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Use the Show dropdown to select 20 rows per page, then 50, then 100\n4. Use the First, Previous, Next, and Last pagination controls\n5. Confirm that: The selected number of rows is displayed per page; First and Previous are disabled on the first page, Next and Last are disabled on the last page; each control navigates to the correct page; the footer shows the total row count (e.g. 'N items').",
+    "The selected number of rows is displayed per page; First and Previous are disabled on the first page, Next and Last are disabled on the last page; each control navigates to the correct page; the footer shows the total row count (e.g. 'N items').",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 51,
+   "values": [
+    "LT-037",
+    "Verify Export functionality across supported formats and page sizes",
+    "Refer to Common Preconditions above.",
+    "Page sizes: 20, 50, 100. Export formats: CSV, Excel, PDF, Word.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Set the page size to 20 and export as CSV, then Excel, then PDF, then Word\n4. Repeat the export for page sizes 50 and 100\n5. Confirm that: Each export format produces a file containing the correct number of currently-displayed items for the selected page size.",
+    "Each export format produces a file containing the correct number of currently-displayed items for the selected page size.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 52,
+   "values": [
+    "LT-038",
+    "Verify Import functionality",
+    "Refer to Common Preconditions above.",
+    "Import file: QA_LoanTypes_Import.csv containing 3 valid loan type rows.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click Import, choose 'QA_LoanTypes_Import.csv', and submit\n4. Confirm that: All items in the file are imported successfully and appear in the lister.",
+    "All items in the file are imported successfully and appear in the lister.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 53,
+   "values": [
+    "LT-039",
+    "Verify tooltips display on hover for truncated/long text values",
+    "Refer to Common Preconditions above.",
+    "Description column value longer than the column width, e.g. 'This is a long description used to validate tooltip display on hover for truncated text values'.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Hover the mouse over a truncated Description value in the grid\n4. Confirm that: A tooltip displaying the full text appears on hover for any truncated or long value.",
+    "A tooltip displaying the full text appears on hover for any truncated or long value.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 54,
+   "values": [
+    "LT-040",
+    "Verify overall lister UI consistency (spacing, alignment, controls) matches the design standard",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Visually inspect the lister page's headers, buttons, filters, and grid layout, spacing, and alignment\n4. Confirm that: All UI elements (headers, buttons, filters, grid) are consistent with the application's standard lister design.",
+    "All UI elements (headers, buttons, filters, grid) are consistent with the application's standard lister design.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 55,
+   "values": [
+    "CREATE  (33 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 56,
+   "values": [
+    "LT-041",
+    "Create page title is 'Create loan type'",
+    "Refer to Common Preconditions above. Navigate to the Loan types list and click Create.",
+    "N/A (page-chrome check only).",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Confirm that: The Create page displays a page title/H1 that clearly identifies the action and entity (e.g. 'Create Loan Type'), consistent with the naming convention used by the list page title ('Loan types') and the Delete modal title ('Delete loan type').",
+    "The Create page displays a page title/H1 that clearly identifies the action and entity (e.g. 'Create Loan Type'), consistent with the naming convention used by the list page title ('Loan types') and the Delete modal title ('Delete loan type').",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 57,
+   "values": [
+    "LT-042",
+    "Loan type name field present",
+    "Refer to Common Preconditions above.",
+    "Name field: Loan type name field (no value entered \u2014 presence check only).",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Confirm that: Text input for the Loan type name is visible on the Create page.",
+    "Text input for the Loan type name is visible on the Create page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 58,
+   "values": [
+    "LT-043",
+    "Empty name blocked",
+    "Refer to Common Preconditions above.",
+    "Name: (leave blank)\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Leave the Name field blank, fill Type 'Non-revolving', Interest calculation method 'Simple', Description 'Client QA loan type'\n5. Click 'Save'\n6. Confirm that: A validation error appears stating that the Name field is required, and the record is not saved (the page stays on Create).",
+    "A validation error appears stating that the Name field is required, and the record is not saved (the page stays on Create).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 59,
+   "values": [
+    "LT-044",
+    "Description optional",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: (leave blank)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Fill Name 'QA Non-Revolving Loan Type', Type 'Non-revolving', Interest calculation method 'Simple', and leave the Description field blank\n5. Click 'Save'\n6. Confirm that: The Description label has no asterisk, and the record saves successfully with the Description field left empty.",
+    "The Description label has no asterisk, and the record saves successfully with the Description field left empty.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 60,
+   "values": [
+    "LT-045",
+    "Type defaults visible",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Observe the Type field control\n5. Confirm that: Revolving and Non-revolving radio buttons are both visible on the Create page.",
+    "Revolving and Non-revolving radio buttons are both visible on the Create page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 61,
+   "values": [
+    "LT-046",
+    "Interest type options",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Select Type 'Non-revolving' and open the Interest type dropdown\n5. Confirm that: Both 'Simple' and 'Compound' are listed as Interest type options.",
+    "Both 'Simple' and 'Compound' are listed as Interest type options.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 62,
+   "values": [
+    "LT-047",
+    "Interest calculation method required",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: (leave blank)\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Select Type 'Non-revolving' and observe the Interest calculation method field label\n5. Confirm that: The Interest calculation method field appears (conditionally, after Type is selected) with an asterisk (*) indicating it is required.",
+    "The Interest calculation method field appears (conditionally, after Type is selected) with an asterisk (*) indicating it is required.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 63,
+   "values": [
+    "LT-048",
+    "Interest calculation method options (Revolving)",
+    "Refer to Common Preconditions above.",
+    "Name: QA Revolving Loan Type\nType: Revolving\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Select Type 'Revolving' and open the Interest calculation method dropdown\n5. Confirm that: 'Actual/365' and 'Actual/360' are listed as the Interest calculation method options for Revolving.",
+    "'Actual/365' and 'Actual/360' are listed as the Interest calculation method options for Revolving.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 64,
+   "values": [
+    "LT-049",
+    "Interest calculation method options (Non-revolving)",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Select Type 'Non-revolving' and open the Interest calculation method dropdown\n5. Confirm that: 'Actual/365', 'Actual/360', and '30/360' are all listed as the Interest calculation method options for Non-revolving (a superset of Revolving's two options).",
+    "'Actual/365', 'Actual/360', and '30/360' are all listed as the Interest calculation method options for Non-revolving (a superset of Revolving's two options).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 65,
+   "values": [
+    "LT-050",
+    "Status defaults to Active",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill Name 'QA Non-Revolving Loan Type', Type 'Non-revolving', Interest calculation method 'Simple', Description 'Client QA loan type', add a Principal and an Interest payment priority row, and click Save\n4. Open the newly created record's View page\n5. Confirm that: The record's Status defaults to Active on the View page (there is no Status field on the Create page itself).",
+    "The record's Status defaults to Active on the View page (there is no Status field on the Create page itself).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 66,
+   "values": [
+    "LT-051",
+    "Order Entry transaction definition required",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nOrder Entry transaction definition: (leave blank)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Observe the Order Entry transaction definition field label\n5. Confirm that: The Order Entry transaction definition label displays an asterisk (*) indicating it is required.",
+    "The Order Entry transaction definition label displays an asterisk (*) indicating it is required.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 67,
+   "values": [
+    "LT-052",
+    "Item for loan principal posting required",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nItem for loan principal posting: (leave blank)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Observe the Item for loan principal posting field label\n5. Confirm that: The Item for loan principal posting label displays an asterisk (*) indicating it is required.",
+    "The Item for loan principal posting label displays an asterisk (*) indicating it is required.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 68,
+   "values": [
+    "LT-053",
+    "Item for loan interest posting required",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nItem for loan interest posting: (leave blank)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Observe the Item for loan interest posting field label\n5. Confirm that: The Item for loan interest posting label displays an asterisk (*) indicating it is required.",
+    "The Item for loan interest posting label displays an asterisk (*) indicating it is required.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 69,
+   "values": [
+    "LT-054",
+    "Add row button present",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Scroll to the Payment priority order section\n5. Confirm that: An 'Add row' button is visible in the Payment priority order section.",
+    "An 'Add row' button is visible in the Payment priority order section.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 70,
+   "values": [
+    "LT-055",
+    "Fee type disabled for Interest/Principal",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nPayment priority row Type: Interest (and separately Principal)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' and in the Payment priority order section, add a row and set its Type to 'Interest'\n4. Observe the Fee type dropdown on that row; repeat with Type set to 'Principal'\n5. Confirm that: The Fee type dropdown is disabled for rows with Type set to Interest or Principal.",
+    "The Fee type dropdown is disabled for rows with Type set to Interest or Principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 71,
+   "values": [
+    "LT-056",
+    "Fee type enabled for Fee",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nPayment priority row Type: Fee",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' and in the Payment priority order section, add a row and set its Type to 'Fee'\n4. Observe the Fee type dropdown on that row\n5. Confirm that: The Fee type dropdown is enabled and selectable for rows with Type set to Fee.",
+    "The Fee type dropdown is enabled and selectable for rows with Type set to Fee.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 72,
+   "values": [
+    "LT-057",
+    "Save button visible",
+    "Refer to Common Preconditions above.",
+    "N/A.",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the Create Loan Type page\n4. Confirm that: A 'Save' button is visible on the Create page.",
+    "A 'Save' button is visible on the Create page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 73,
+   "values": [
+    "LT-058",
+    "Cancel returns to list without saving",
+    "Refer to Common Preconditions above.",
+    "Name: QA Cancel Test\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' and fill Name 'QA Cancel Test', Type 'Non-revolving', Interest calculation method 'Simple', Description 'Client QA loan type'\n4. Click 'Cancel' instead of Save\n5. Search the lister for 'QA Cancel Test'\n6. Confirm that: The user is returned to the Loan types list, no new record is saved, and the record does not appear in the lister.",
+    "The user is returned to the Loan types list, no new record is saved, and the record does not appear in the lister.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 74,
+   "values": [
+    "LT-059",
+    "At least one Payment priority row required",
+    "Refer to Common Preconditions above.",
+    "Name: QA No Payment Row Test\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nPayment priority rows: (none added)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill Name 'QA No Payment Row Test', Type 'Non-revolving', Interest calculation method 'Simple', Description 'Client QA loan type', and leave the Payment priority order section with 0 rows\n4. Click 'Save'\n5. Confirm that: A validation error appears stating \"At least one Payment priority order line item is required.\", and the record is not saved.",
+    "A validation error appears stating \"At least one Payment priority order line item is required.\", and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 75,
+   "values": [
+    "LT-060",
+    "Non-revolving Loan Type saves with a valid Principal + Interest row pair",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving\nInterest calculation method: Simple\nInterest calculation method (rate basis): 30/360\nDescription: Client QA loan type\nPayment priority rows: Principal (sort 1), Interest (sort 2)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill Name 'QA Non-Revolving Loan Type', Type 'Non-revolving', Interest type 'Simple', Interest calculation method '30/360', Description 'Client QA loan type'\n4. In the Payment priority order section, add one Principal row (sort order 1) and one Interest row (sort order 2)\n5. Click 'Save'\n6. Confirm that: The record saves successfully and the user lands on the View page showing the entered Interest type, Interest calculation method, and the Principal and Interest payment priority rows.",
+    "The record saves successfully and the user lands on the View page showing the entered Interest type, Interest calculation method, and the Principal and Interest payment priority rows.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 76,
+   "values": [
+    "LT-061",
+    "Non-revolving requires both a Principal and an Interest row",
+    "Refer to Common Preconditions above.",
+    "Name: QA Missing Principal Row Test\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nPayment priority rows: Fee (sort 1) only",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill Name 'QA Missing Principal Row Test', Type 'Non-revolving', Interest calculation method 'Simple', Description 'Client QA loan type'\n4. In the Payment priority order section, add only one Fee row (sort order 1)\n5. Click 'Save'\n6. Confirm that: A validation error appears stating \"Payment priority order should contain both principal and interest item for Non-revolving loan type\", and the record is not saved.",
+    "A validation error appears stating \"Payment priority order should contain both principal and interest item for Non-revolving loan type\", and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 77,
+   "values": [
+    "LT-062",
+    "Stale Fee type value blocks save after switching row Type away from Fee",
+    "Refer to Common Preconditions above.",
+    "Name: QA Stale Fee Type Test\nType: Non-revolving\nInterest calculation method: Simple\nDescription: Client QA loan type\nPayment priority row: Type = Fee with Fee type = Late Fee, then Type changed to Interest without clearing Fee type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill Name 'QA Stale Fee Type Test', Type 'Non-revolving', Interest calculation method 'Simple', Description 'Client QA loan type'\n4. Add a Payment priority row, set its Type to 'Fee' and its Fee type to 'Late Fee'\n5. Change that row's Type to 'Interest' without clearing the Fee type value, add a Principal row, and click 'Save'\n6. Confirm that: A validation error appears stating that a Principal or Interest row should not have any Fee type selected (PRINCIPAL_OR_INTEREST_SHOULD_NOT_HAVE_ANY_FEE_SELECTED), and the record is not saved.",
+    "A validation error appears stating that a Principal or Interest row should not have any Fee type selected (PRINCIPAL_OR_INTEREST_SHOULD_NOT_HAVE_ANY_FEE_SELECTED), and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 78,
+   "values": [
+    "LT-063",
+    "Reject creating a record with a duplicate Name",
+    "Refer to Common Preconditions above. A record already exists with Name = 'QA Loan Type A'.",
+    "Existing record Name: QA Loan Type A\nNew record Name (duplicate): QA Loan Type A",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type and confirm a record named 'QA Loan Type A' already exists\n3. Click '+Create' and enter Name 'QA Loan Type A' (matching the existing record exactly), completing the other required fields with valid values\n4. Click 'Save'\n5. Confirm that: A validation error appears stating that the Name 'QA Loan Type A' is already in use, and the duplicate record is not created.",
+    "A validation error appears stating that the Name 'QA Loan Type A' is already in use, and the duplicate record is not created.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 79,
+   "values": [
+    "LT-064",
+    "Reject 30/360 for a revolving (non-amortized) loan type",
+    "Refer to Common Preconditions above.",
+    "Name: QA Revolving 30-360 Test\nType: Revolving\nInterest calculation method: 30/360",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill Name 'QA Revolving 30-360 Test', select Type 'Revolving'\n4. Attempt to select Interest calculation method '30/360' (not offered) or otherwise submit with it set\n5. Click 'Save'\n6. Confirm that: Creation is blocked because revolving loan types only accept Actual/365 or Actual/360 as the Interest calculation method, and the record is not saved.",
+    "Creation is blocked because revolving loan types only accept Actual/365 or Actual/360 as the Interest calculation method, and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 80,
+   "values": [
+    "LT-065",
+    "Accept Actual/365, Actual/360, and 30/360 for non-revolving loan types",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Actual365; Type: Non-revolving; Interest calculation method: Actual/365\nName: QA Non-Revolving Actual360; Type: Non-revolving; Interest calculation method: Actual/360\nName: QA Non-Revolving 30-360; Type: Non-revolving; Interest calculation method: 30/360",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill Name 'QA Non-Revolving Actual365', Type 'Non-revolving', Interest calculation method 'Actual/365', complete other required fields, and click Save\n4. Repeat step 3 for Name 'QA Non-Revolving Actual360' with Interest calculation method 'Actual/360'\n5. Repeat step 3 for Name 'QA Non-Revolving 30-360' with Interest calculation method '30/360'\n6. Confirm that: All three non-revolving loan types save successfully with their respective Interest calculation methods.",
+    "All three non-revolving loan types save successfully with their respective Interest calculation methods.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 81,
+   "values": [
+    "LT-066",
+    "Reject duplicate payment-priority sort orders",
+    "Refer to Common Preconditions above.",
+    "Name: QA Duplicate Sort Test\nPayment priority rows: Principal (sort order 1), Interest (sort order 1)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill required fields with valid values, and add a Principal row with sort order 1 and an Interest row also with sort order 1\n4. Click 'Save'\n5. Confirm that: A validation error appears stating that payment priority sort order values must be unique, and the record is not saved.",
+    "A validation error appears stating that payment priority sort order values must be unique, and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 82,
+   "values": [
+    "LT-067",
+    "Reject payment-priority sort order less than 1",
+    "Refer to Common Preconditions above.",
+    "Name: QA Sort Order Zero Test\nPayment priority row: Type = Principal, Sort order = 0",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill required fields with valid values, and add a Principal row with sort order 0\n4. Click 'Save'\n5. Confirm that: A validation error appears stating that the sort order must be greater than zero, and the record is not saved.",
+    "A validation error appears stating that the sort order must be greater than zero, and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 83,
+   "values": [
+    "LT-068",
+    "Reject payment-priority sort order beyond the row count",
+    "Refer to Common Preconditions above.",
+    "Name: QA Sort Order Exceeds Test\nPayment priority rows: Principal (sort order 1), Interest (sort order 3), total rows = 2",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill required fields with valid values, and add two rows: Principal with sort order 1 and Interest with sort order 3\n4. Click 'Save'\n5. Confirm that: A validation error appears stating that the sort order cannot exceed the number of configured rows, and the record is not saved.",
+    "A validation error appears stating that the sort order cannot exceed the number of configured rows, and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 84,
+   "values": [
+    "LT-069",
+    "Reject multiple Principal payment-priority rows",
+    "Refer to Common Preconditions above.",
+    "Name: QA Multiple Principal Test\nPayment priority rows: Principal (sort order 1), Principal (sort order 2), Interest (sort order 3)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill required fields with valid values, and add three rows: Principal (sort order 1), Principal (sort order 2), Interest (sort order 3)\n4. Click 'Save'\n5. Confirm that: A validation error appears stating that only one Principal row is allowed, and the record is not saved.",
+    "A validation error appears stating that only one Principal row is allowed, and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 85,
+   "values": [
+    "LT-070",
+    "Reject multiple Interest payment-priority rows",
+    "Refer to Common Preconditions above.",
+    "Name: QA Multiple Interest Test\nPayment priority rows: Principal (sort order 1), Interest (sort order 2), Interest (sort order 3)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create', fill required fields with valid values, and add three rows: Principal (sort order 1), Interest (sort order 2), Interest (sort order 3)\n4. Click 'Save'\n5. Confirm that: A validation error appears stating that only one Interest row is allowed, and the record is not saved.",
+    "A validation error appears stating that only one Interest row is allowed, and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 86,
+   "values": [
+    "LT-071",
+    "Reject a Fee row whose fee type is inactive or has no item",
+    "Refer to Common Preconditions above.",
+    "Fee row 1 - Fee type: QA-Inactive-Fee (Status = Inactive)\nFee row 2 - Fee type: QA-NoItem-Fee (no linked Item)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the New loan type form\n4. In the Payment priority order grid, add a row with Row type = Fee and Fee type = QA-Inactive-Fee (an inactive fee type)\n5. Click 'Save' and note the result, then repeat with a second row using Fee type = QA-NoItem-Fee (a fee type with no linked item)\n6. Confirm that: A validation error appears stating the fee type is inactive or has no associated item, and the record is not saved. This occurs both when the fee type Status is Inactive and when the fee type has no linked item.",
+    "A validation error appears stating the fee type is inactive or has no associated item, and the record is not saved. This occurs both when the fee type Status is Inactive and when the fee type has no linked item.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 87,
+   "values": [
+    "LT-072",
+    "Reject a transaction definition that is not an Invoice in the Loan workflow",
+    "Refer to Common Preconditions above.",
+    "Transaction definition document class: Sales Order\nWorkflow category: Other\nName: QA Invalid TxnDef Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the New loan type form\n4. In the Order Entry transaction definition field, select a transaction definition whose document class is Sales Order and whose workflow category is Other (not Invoice in the Loan workflow)\n5. Click 'Save'\n6. Confirm that: A validation error appears stating the transaction definition must be an Invoice document in the Loan workflow, and the loan type is not saved.",
+    "A validation error appears stating the transaction definition must be an Invoice document in the Loan workflow, and the loan type is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 88,
+   "values": [
+    "LT-073",
+    "Reject principal, interest, or fee items whose GL groups are absent from the transaction definition",
+    "Refer to Common Preconditions above.",
+    "Principal item: QA-Principal-Item (GL group: GL-Group-X)\nInterest item: QA-Interest-Item (GL group: GL-Group-Y)\nFee item: QA-Fee-Item (GL group: GL-Group-Z)\nOrder Entry transaction definition: does not include GL-Group-X, GL-Group-Y, or GL-Group-Z",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' to open the New loan type form\n4. Select an Order Entry transaction definition, then select a Principal item whose GL group is not included in that transaction definition, and click 'Save'\n5. Repeat separately for the Interest item and then the Fee item, each with a GL group absent from the transaction definition\n6. Confirm that: A validation error appears for each item stating its GL group is not included in the selected transaction definition, and the record is not saved.",
+    "A validation error appears for each item stating its GL group is not included in the selected transaction definition, and the record is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 89,
+   "values": [
+    "EDIT  (15 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 90,
+   "values": [
+    "LT-074",
+    "Edit page title identifies the record being edited",
+    "Refer to Common Preconditions above.",
+    "Loan type: Term Loan - Standard",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing loan type 'Term Loan - Standard' and click Edit\n4. Confirm that: The Edit page displays a page title/H1 that clearly identifies the record being edited (e.g. 'Edit loan type' or the loan type's name), following the same naming convention as the list page title ('Loan types') and the Delete modal title ('Delete loan type').",
+    "The Edit page displays a page title/H1 that clearly identifies the record being edited (e.g. 'Edit loan type' or the loan type's name), following the same naming convention as the list page title ('Loan types') and the Delete modal title ('Delete loan type').",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 91,
+   "values": [
+    "LT-075",
+    "Edit form pre-populates name",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm that: The Name field on the Edit form is pre-populated with the record's saved value, 'QA Non-Revolving Loan Type'.",
+    "The Name field on the Edit form is pre-populated with the record's saved value, 'QA Non-Revolving Loan Type'.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 92,
+   "values": [
+    "LT-076",
+    "Edit form pre-populates Description",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nDescription: Client QA test text",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' (Description = 'Client QA test text') and click Edit\n4. Confirm that: The Description field on the Edit form is pre-populated with the record's saved value, 'Client QA test text'.",
+    "The Description field on the Edit form is pre-populated with the record's saved value, 'Client QA test text'.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 93,
+   "values": [
+    "LT-077",
+    "Type is read-only in Edit",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Attempt to change the Type field value\n5. Confirm that: The Type field displays as plain, read-only text showing 'Non-revolving' and cannot be changed via a dropdown or radio control.",
+    "The Type field displays as plain, read-only text showing 'Non-revolving' and cannot be changed via a dropdown or radio control.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 94,
+   "values": [
+    "LT-078",
+    "Edit form pre-populates Interest type",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nInterest type: Simple",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm that: The Interest type field on the Edit form is pre-populated with the record's saved value.",
+    "The Interest type field on the Edit form is pre-populated with the record's saved value.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 95,
+   "values": [
+    "LT-079",
+    "Edit form pre-populates Interest calculation method",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nInterest calculation method: Simple",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm that: The Interest calculation method field on the Edit form is pre-populated with the record's saved value, 'Simple'.",
+    "The Interest calculation method field on the Edit form is pre-populated with the record's saved value, 'Simple'.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 96,
+   "values": [
+    "LT-080",
+    "Edit form pre-populates Status",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nStatus: Active",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm that: The Status field on the Edit form is pre-populated showing 'Active'.",
+    "The Status field on the Edit form is pre-populated showing 'Active'.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 97,
+   "values": [
+    "LT-081",
+    "Clearing name and saving shows validation error",
+    "Refer to Common Preconditions above.",
+    "Name: (clear existing value, leave blank)\nExisting Name before edit: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Clear the Name field so it is blank\n5. Click 'Save'\n6. Confirm that: A validation error appears stating the Name field is required. The page stays on the Edit form and the change is not saved.",
+    "A validation error appears stating the Name field is required. The page stays on the Edit form and the change is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 98,
+   "values": [
+    "LT-082",
+    "Cancelling edit does not save changes",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nEdited Name (not saved): QA Non-Revolving Loan Type CHANGED",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Change the Name field to 'QA Non-Revolving Loan Type CHANGED'\n5. Click 'Cancel' instead of Save\n6. Confirm that: The page returns to the View page with the original Name intact ('QA Non-Revolving Loan Type'); the cancelled change is not saved.",
+    "The page returns to the View page with the original Name intact ('QA Non-Revolving Loan Type'); the cancelled change is not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 99,
+   "values": [
+    "LT-083",
+    "Payment priority rows pre-populated in Edit",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nExisting Payment priority rows: Principal (Sort order 1), Interest (Sort order 2), Fee (Sort order 3)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Scroll to the Payment priority order grid\n5. Confirm that: The Payment priority order grid on the Edit form displays the existing rows pre-populated with their saved values.",
+    "The Payment priority order grid on the Edit form displays the existing rows pre-populated with their saved values.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 100,
+   "values": [
+    "LT-084",
+    "Save button (with dropdown) visible",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm that: The Save button, with its dropdown of additional save options, is visible on the Edit page header.",
+    "The Save button, with its dropdown of additional save options, is visible on the Edit page header.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: D. Edit (IDs: TC-LT-047\u2013056)"
+   ]
+  },
+  {
+   "row": 101,
+   "values": [
+    "LT-085",
+    "Edit form pre-populates Order Entry transaction definition and rejects clearing it",
+    "Refer to Common Preconditions above. An existing record is available to edit.",
+    "Name: QA Non-Revolving Loan Type\nOrder Entry transaction definition: QA Loan Invoice TxnDef",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm the Order Entry transaction definition field is pre-populated with 'QA Loan Invoice TxnDef'\n5. Clear the Order Entry transaction definition field and click 'Save'\n6. Confirm that: The Order Entry transaction definition field is pre-populated with the saved value on the Edit form. Clearing it and saving shows a validation error stating the field is required, and the page stays on Edit with the change not saved.",
+    "The Order Entry transaction definition field is pre-populated with the saved value on the Edit form. Clearing it and saving shows a validation error stating the field is required, and the page stays on Edit with the change not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 102,
+   "values": [
+    "LT-086",
+    "Edit form pre-populates Item for loan principal posting and rejects clearing it",
+    "Refer to Common Preconditions above. An existing record is available to edit.",
+    "Name: QA Non-Revolving Loan Type\nItem for loan principal posting: QA-Principal-Item",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm the Item for loan principal posting field is pre-populated with 'QA-Principal-Item'\n5. Clear the Item for loan principal posting field and click 'Save'\n6. Confirm that: The Item for loan principal posting field is pre-populated with the saved value on the Edit form. Clearing it and saving shows a validation error stating the field is required, and the page stays on Edit with the change not saved.",
+    "The Item for loan principal posting field is pre-populated with the saved value on the Edit form. Clearing it and saving shows a validation error stating the field is required, and the page stays on Edit with the change not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 103,
+   "values": [
+    "LT-087",
+    "Edit form pre-populates Item for loan interest posting and rejects clearing it",
+    "Refer to Common Preconditions above. An existing record is available to edit.",
+    "Name: QA Non-Revolving Loan Type\nItem for loan interest posting: QA-Interest-Item",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' and click Edit\n4. Confirm the Item for loan interest posting field is pre-populated with 'QA-Interest-Item'\n5. Clear the Item for loan interest posting field and click 'Save'\n6. Confirm that: The Item for loan interest posting field is pre-populated with the saved value on the Edit form. Clearing it and saving shows a validation error stating the field is required, and the page stays on Edit with the change not saved.",
+    "The Item for loan interest posting field is pre-populated with the saved value on the Edit form. Clearing it and saving shows a validation error stating the field is required, and the page stays on Edit with the change not saved.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 104,
+   "values": [
+    "LT-088",
+    "Reject renaming a record to a duplicate Name on Edit",
+    "Refer to Common Preconditions above. Two existing records are available: one with Name = 'QA Loan Type A' and another with Name = 'QA Loan Type B'.",
+    "Record being edited: QA Loan Type B\nNew Name entered (duplicate): QA Loan Type A\nExisting other record with Name: QA Loan Type A",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the record with Name = 'QA Loan Type B' and click Edit\n4. Change the Name field to 'QA Loan Type A' (already used by another existing record)\n5. Click 'Save'\n6. Confirm that: A validation error appears stating the Name 'QA Loan Type A' is already in use by another record. The save is blocked and the record's Name is not changed.",
+    "A validation error appears stating the Name 'QA Loan Type A' is already in use by another record. The save is blocked and the record's Name is not changed.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 105,
+   "values": [
+    "VIEW  (25 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 106,
+   "values": [
+    "LT-089",
+    "View/Detail page title identifies the loan type record",
+    "Refer to Common Preconditions above.",
+    "Loan type: Term Loan - Standard",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing loan type 'Term Loan - Standard' to its View/Detail page\n4. Confirm that: The View page displays a page title/H1 that clearly identifies the record (e.g. the loan type's Name), consistent with the list page ('Loan types') naming convention, and separate from the Name field value shown in the record body.",
+    "The View page displays a page title/H1 that clearly identifies the record (e.g. the loan type's Name), consistent with the list page ('Loan types') naming convention, and separate from the Name field value shown in the record body.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 107,
+   "values": [
+    "LT-090",
+    "Create button visible",
+    "Refer to Common Preconditions above.",
+    "User role: Full Access",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: The '+Create' button is visible and enabled on the Loan types list page.",
+    "The '+Create' button is visible and enabled on the Loan types list page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 108,
+   "values": [
+    "LT-091",
+    "Grid has required columns",
+    "Refer to Common Preconditions above.",
+    "None (grid column check)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: The Loan type, Interest calculation method, and Description columns are shown in the grid.",
+    "The Loan type, Interest calculation method, and Description columns are shown in the grid.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 109,
+   "values": [
+    "LT-092",
+    "Name filter has Contains placeholder",
+    "Refer to Common Preconditions above.",
+    "Filter value entered: QA",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click into the filter text input for the Loan type column\n4. Confirm that: The Loan type column filter is a text input with placeholder text `Contains`.",
+    "The Loan type column filter is a text input with placeholder text `Contains`.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 110,
+   "values": [
+    "LT-093",
+    "Type filter is a dropdown",
+    "Refer to Common Preconditions above.",
+    "None (filter control type check)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click into the Type filter control\n4. Confirm that: The Type column filter is a combobox (dropdown) listing Revolving and Non-revolving, not a free-text field.",
+    "The Type column filter is a combobox (dropdown) listing Revolving and Non-revolving, not a free-text field.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 111,
+   "values": [
+    "LT-094",
+    "Grid shows at least one record",
+    "Refer to Common Preconditions above.",
+    "None (existing grid data)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: The grid shows at least one row/record.",
+    "The grid shows at least one row/record.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 112,
+   "values": [
+    "LT-095",
+    "Filtering by name returns matching records",
+    "Refer to Common Preconditions above.",
+    "Filter value: QA\nMatching record Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Enter 'QA' into the Loan type Name filter and apply it\n4. Confirm that: Only rows whose Name contains 'QA' remain displayed in the grid; non-matching rows are filtered out.",
+    "Only rows whose Name contains 'QA' remain displayed in the grid; non-matching rows are filtered out.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 113,
+   "values": [
+    "LT-096",
+    "Pagination shows item count",
+    "Refer to Common Preconditions above.",
+    "None (pagination footer check)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: The footer shows the item count in the format \"N items\".",
+    "The footer shows the item count in the format \"N items\".",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 114,
+   "values": [
+    "LT-097",
+    "Manage view button visible",
+    "Refer to Common Preconditions above.",
+    "User role: Full Access",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: The 'Manage view' button is visible on the Loan types list page.",
+    "The 'Manage view' button is visible on the Loan types list page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 115,
+   "values": [
+    "LT-098",
+    "Filters button visible",
+    "Refer to Common Preconditions above.",
+    "None (toolbar control check)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: The 'Filters' button is visible on the Loan types list page.",
+    "The 'Filters' button is visible on the Loan types list page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 116,
+   "values": [
+    "LT-099",
+    "List view / Split view toggles present",
+    "Refer to Common Preconditions above.",
+    "None (toolbar control check)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Confirm that: Both the List view and Split view toggles are visible on the Loan types list page.",
+    "Both the List view and Split view toggles are visible on the Loan types list page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 117,
+   "values": [
+    "LT-100",
+    "Payment priority grid columns",
+    "Refer to Common Preconditions above.",
+    "User role: Full Access",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open an existing loan type and expand the Payment priority order grid\n4. Confirm that: The Payment priority order grid displays the Type and Fee type columns, plus Sort order.",
+    "The Payment priority order grid displays the Type and Fee type columns, plus Sort order.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 118,
+   "values": [
+    "LT-101",
+    "Add row increments grid",
+    "Refer to Common Preconditions above.",
+    "Existing row count before add: N",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' (or Edit an existing record) and open the Payment priority order grid\n4. Note the current row count, then click the grid's 'Add row' control\n5. Confirm that: Clicking 'Add row' adds exactly one new row to the Payment priority order grid.",
+    "Clicking 'Add row' adds exactly one new row to the Payment priority order grid.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 119,
+   "values": [
+    "LT-102",
+    "Row Sort order required",
+    "Refer to Common Preconditions above.",
+    "Row Sort order: (leave blank)\nRow Type: Principal",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' and add a Payment priority row, leaving the Sort order field blank\n4. Click 'Save'\n5. Confirm that: A validation error stating \"sortOrder cannot be empty\" appears, and the record is not saved until Sort order is provided.",
+    "A validation error stating \"sortOrder cannot be empty\" appears, and the record is not saved until Sort order is provided.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 120,
+   "values": [
+    "LT-103",
+    "Detail page displays Loan type name",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Confirm that: The Detail/View page displays the loan type Name, 'QA Non-Revolving Loan Type'.",
+    "The Detail/View page displays the loan type Name, 'QA Non-Revolving Loan Type'.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 121,
+   "values": [
+    "LT-104",
+    "Detail page displays Type",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nType: Non-revolving",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Confirm that: The Detail/View page displays the Type field with the value 'Non-revolving'.",
+    "The Detail/View page displays the Type field with the value 'Non-revolving'.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 122,
+   "values": [
+    "LT-105",
+    "Detail page displays Interest type",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nInterest type: Simple",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Confirm that: The Detail/View page displays the Interest type field with its value (Compound or Simple).",
+    "The Detail/View page displays the Interest type field with its value (Compound or Simple).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 123,
+   "values": [
+    "LT-106",
+    "Detail page displays Interest calculation method",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nInterest calculation method: Simple",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Confirm that: The Detail/View page displays the Interest calculation method field showing its saved value.",
+    "The Detail/View page displays the Interest calculation method field showing its saved value.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 124,
+   "values": [
+    "LT-107",
+    "Detail page shows Status = Active",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type\nStatus: Active",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Confirm that: The Detail/View page displays the Status field with the value 'Active'.",
+    "The Detail/View page displays the Status field with the value 'Active'.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 125,
+   "values": [
+    "LT-108",
+    "'Loan invoicing defaults' section visible",
+    "Refer to Common Preconditions above.",
+    "User role: Full Access",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open an existing loan type to its View page\n4. Confirm that: The 'Loan invoicing defaults' section is visible on the View page and is expandable.",
+    "The 'Loan invoicing defaults' section is visible on the View page and is expandable.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 126,
+   "values": [
+    "LT-109",
+    "'Payment priority order' section visible",
+    "Refer to Common Preconditions above.",
+    "User role: Full Access",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open an existing loan type to its View page\n4. Confirm that: The 'Payment priority order' section is visible on the View page and is expandable.",
+    "The 'Payment priority order' section is visible on the View page and is expandable.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 127,
+   "values": [
+    "LT-110",
+    "Three-dot menu shows 'View audit trail'",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page and click the three-dot (More actions) menu\n4. Confirm that: 'View audit trail' is present within the View page's More actions (three-dot) menu.",
+    "'View audit trail' is present within the View page's More actions (three-dot) menu.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 128,
+   "values": [
+    "LT-111",
+    "Breadcrumb 'Loan types' link navigates back",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Click the 'Loan types' breadcrumb link\n5. Confirm that: Clicking the 'Loan types' breadcrumb link returns the user to the Loan types list page.",
+    "Clicking the 'Loan types' breadcrumb link returns the user to the Loan types list page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 129,
+   "values": [
+    "LT-112",
+    "Back arrow navigates to list",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Click the back arrow control\n5. Confirm that: Clicking the back arrow returns the user to the Loan types list page.",
+    "Clicking the back arrow returns the user to the Loan types list page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 130,
+   "values": [
+    "LT-113",
+    "Edit button visible",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Confirm that: The 'Edit' button is visible directly in the View page header.",
+    "The 'Edit' button is visible directly in the View page header.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 131,
+   "values": [
+    "DELETE  (11 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 132,
+   "values": [
+    "LT-114",
+    "Delete opens confirmation modal",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type (disposable record)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the disposable record 'QA Non-Revolving Loan Type' to its View page and click 'Delete'\n4. Confirm that: A confirmation modal opens displaying the dialog heading \"Delete loan type\".",
+    "A confirmation modal opens displaying the dialog heading \"Delete loan type\".",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: E. Delete (IDs: TC-LT-059\u2013063, new \u2014 not present in the original spreadsheet)"
+   ]
+  },
+  {
+   "row": 133,
+   "values": [
+    "LT-115",
+    "Bulk Delete disabled by default",
+    "Refer to Common Preconditions above.",
+    "None (no rows selected)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. On the list page, without selecting any row checkboxes, inspect the toolbar Delete button\n4. Confirm that: The toolbar Delete button is disabled by default when no rows are selected.",
+    "The toolbar Delete button is disabled by default when no rows are selected.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 134,
+   "values": [
+    "LT-116",
+    "Bulk Delete enabled after selecting a row",
+    "Refer to Common Preconditions above.",
+    "Row selected: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. On the list page, select the checkbox for one row (e.g. 'QA Non-Revolving Loan Type')\n4. Confirm that: Selecting one row's checkbox enables the toolbar Delete button.",
+    "Selecting one row's checkbox enables the toolbar Delete button.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 135,
+   "values": [
+    "LT-117",
+    "Select All enables Delete",
+    "Refer to Common Preconditions above.",
+    "None (Select All control)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. On the list page, click the header 'Select All' checkbox\n4. Confirm that: Clicking 'Select All' checks all row checkboxes and enables the toolbar Delete button.",
+    "Clicking 'Select All' checks all row checkboxes and enables the toolbar Delete button.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: A. List page (IDs: TC-LT-001\u2013014)"
+   ]
+  },
+  {
+   "row": 136,
+   "values": [
+    "LT-118",
+    "Remove row decrements grid",
+    "Refer to Common Preconditions above.",
+    "Payment priority grid: existing row to remove",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create' (or Edit an existing record), open the Payment priority order grid, and note the current row count\n4. Click the row-level remove/delete icon on one row\n5. Confirm that: Clicking the row remove icon deletes that row from the grid, decrementing the row count by one.",
+    "Clicking the row remove icon deletes that row from the grid, decrementing the row count by one.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: B. Create (IDs: TC-LT-028\u2013046, TC-LT-057\u2013066 new)"
+   ]
+  },
+  {
+   "row": 137,
+   "values": [
+    "LT-119",
+    "Delete button visible",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page\n4. Confirm that: The 'Delete' button is visible directly in the View page header.",
+    "The 'Delete' button is visible directly in the View page header.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: C. View (IDs: TC-LT-015\u2013027)"
+   ]
+  },
+  {
+   "row": 138,
+   "values": [
+    "LT-120",
+    "Modal message names the record",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type (disposable record)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the disposable record 'QA Non-Revolving Loan Type' to its View page and click 'Delete'\n4. Confirm that: The confirmation modal displays a message containing the loan type name 'QA Non-Revolving Loan Type' followed by \"will be permanently deleted\".",
+    "The confirmation modal displays a message containing the loan type name 'QA Non-Revolving Loan Type' followed by \"will be permanently deleted\".",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: E. Delete (IDs: TC-LT-059\u2013063, new \u2014 not present in the original spreadsheet)"
+   ]
+  },
+  {
+   "row": 139,
+   "values": [
+    "LT-121",
+    "Confirm deletes",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type (disposable record)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the disposable record 'QA Non-Revolving Loan Type' to its View page and click 'Delete'\n4. Click 'Confirm' (or 'Delete') in the confirmation modal\n5. Confirm that: After confirming, the record is deleted and no longer appears in the Loan types list.",
+    "After confirming, the record is deleted and no longer appears in the Loan types list.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: E. Delete (IDs: TC-LT-059\u2013063, new \u2014 not present in the original spreadsheet)"
+   ]
+  },
+  {
+   "row": 140,
+   "values": [
+    "LT-122",
+    "Cancel in modal keeps record",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing record 'QA Non-Revolving Loan Type' to its View page and click 'Delete'\n4. Click 'Cancel' in the confirmation modal\n5. Confirm that: Clicking 'Cancel' closes the modal without deleting; the record remains on the View page.",
+    "Clicking 'Cancel' closes the modal without deleting; the record remains on the View page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: E. Delete (IDs: TC-LT-059\u2013063, new \u2014 not present in the original spreadsheet)"
+   ]
+  },
+  {
+   "row": 141,
+   "values": [
+    "LT-123",
+    "Deleting from View redirects to list",
+    "Refer to Common Preconditions above.",
+    "Name: QA Non-Revolving Loan Type (disposable record)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the disposable record 'QA Non-Revolving Loan Type' to its View page and click 'Delete'\n4. Click 'Confirm' (or 'Delete') in the confirmation modal\n5. Confirm that: After confirming the deletion, the page redirects back to the 'Loan types' list.",
+    "After confirming the deletion, the page redirects back to the 'Loan types' list.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source section: E. Delete (IDs: TC-LT-059\u2013063, new \u2014 not present in the original spreadsheet)"
+   ]
+  },
+  {
+   "row": 142,
+   "values": [
+    "LT-124",
+    "Block deletion of a loan type referenced by a loan account",
+    "Refer to Common Preconditions above. A loan account already references the loan type.",
+    "Loan type: QA-LT-USED\nLoan account: QA-LA-USED (references QA-LT-USED)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the loan type 'QA-LT-USED', which is referenced by loan account 'QA-LA-USED', and click 'Delete'\n4. Click 'Confirm' (or 'Delete') in the confirmation modal\n5. Confirm that: A validation error appears stating the loan type cannot be deleted because it is referenced by an existing loan account. The deletion is blocked and both records remain unchanged.",
+    "A validation error appears stating the loan type cannot be deleted because it is referenced by an existing loan account. The deletion is blocked and both records remain unchanged.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  }
+ ]
+}

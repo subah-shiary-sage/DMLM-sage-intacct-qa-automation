@@ -1,0 +1,12 @@
+playwright>=1.40.0
+pytest>=7.0.0
+pytest-playwright>=0.4.0
+python-dotenv>=1.0.0
+pytest-html>=4.0.0
+# For UI+API+DB combined scenarios (tests/integration/):
+oracledb>=2.0.0            # Oracle DB access, thin mode (no Oracle client needed)
+# Bruno API calls are driven via the Bruno CLI (Node): npm install -g @usebruno/cli
+# For run_regression.py (checklist workbook, JIRA filing, module registry):
+openpyxl>=3.1.0            # read/write Regression/LME_Regression_Consolidated.xlsx
+requests>=2.31.0           # JIRA REST + integrations/loan_api.py
+PyYAML>=6.0                # regression_config.yaml module registry

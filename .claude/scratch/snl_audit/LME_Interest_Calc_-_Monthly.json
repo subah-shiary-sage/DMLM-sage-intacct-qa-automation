@@ -1,0 +1,2075 @@
+{
+ "sheet": "LME Interest Calc - Monthly",
+ "rows": [
+  {
+   "row": 1,
+   "values": [
+    "Prepared By",
+    "Subah Tasnim Shiary",
+    null,
+    "Total Test Cases",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 2,
+   "values": [
+    "Executed By",
+    "Subah Tasnim Shiary",
+    null,
+    "Passed",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 3,
+   "values": [
+    "Updated On",
+    "2026-08-28 00:00:00",
+    null,
+    "Failed",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 4,
+   "values": [
+    "Time est",
+    "Initial testing:",
+    null,
+    "Untested",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 5,
+   "values": [
+    null,
+    "Bugfix testing:",
+    null,
+    "To be tested",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 6,
+   "values": [
+    "common preconditions",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 7,
+   "values": [
+    "navigation",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 8,
+   "values": [
+    "Lending - Interest Calculation (Monthly)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 9,
+   "values": [
+    "Common Preconditions",
+    null,
+    "1. User is signed in to Sage Intacct.\n2. The correct Lending Management or Depository Management entity is selected.\n3. The module is enabled for the company.\n4. The user has the permission required for the scenario.\n5. Required master/configuration records are active and available.",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 11,
+   "values": [
+    "Navigation: Applications > Lending Management > Loan account | Client baseline | 116 test cases | Updated 2026-08-28",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 13,
+   "values": [
+    "Test Case ID",
+    "Test Scenario",
+    "Preconditions",
+    "Test Data",
+    "Test Steps",
+    "Expected Result",
+    "Requirement/Jira Reference",
+    "IS Automated",
+    "Status",
+    "Comments"
+   ]
+  },
+  {
+   "row": 14,
+   "values": [
+    "Revolving, Actual/365, Simple interest, with payment schedule",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 15,
+   "values": [
+    "ICM-001",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 (Revolving, Actual/365, Simple interest, with payment schedule), newly originated and due for its first interest posting.\n4. Run/post interest for the first month.\n5. Confirm that: Interest posts successfully for the first month, and the posted amount matches the expected Actual/365 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "Interest posts successfully for the first month, and the posted amount matches the expected Actual/365 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: acc: 2248\nexp: 10.07, act: 10.00"
+   ]
+  },
+  {
+   "row": 16,
+   "values": [
+    "ICM-002",
+    "The accrued interest value from the Loan Details API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nAs-of date: current business date (inclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that counts today as an accrual day (i.e., calculated through and including the current business date).",
+    "The Loan Details API response returns an accrued interest amount that counts today as an accrual day (i.e., calculated through and including the current business date).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: API does not support"
+   ]
+  },
+  {
+   "row": 17,
+   "values": [
+    "ICM-003",
+    "The accrued interest value from the Loan Details API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nAs-of date: current business date (exclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value against the day-count contract for exclusive accrual.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 18,
+   "values": [
+    "ICM-004",
+    "The accrued interest value is correctly displaying in the UI",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's View page.\n4. Locate the Accrued interest field and note the value shown.\n5. Confirm that: The Accrued interest field on the loan account View page displays the same amount as the backend-calculated accrued interest value, with no discrepancy.",
+    "The Accrued interest field on the loan account View page displays the same amount as the backend-calculated accrued interest value, with no discrepancy.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 19,
+   "values": [
+    "ICM-005",
+    "Accrued interest is correctly recalculated after making a mid-month adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nAdjustment date: 2026-08-15\nAdjustment type: Interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle with interest already accruing.\n4. Post an Interest adjustment dated 2026-08-15.\n5. Re-open the loan account and check the accrued interest value.\n6. Confirm that: After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 20,
+   "values": [
+    "ICM-006",
+    "Interest and accrued values are correctly calculated after performing a mid-month write-off and posting interest for that month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nWrite-off date: 2026-08-15 (mid-month)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle.\n4. Perform a mid-month write-off dated 2026-08-15.\n5. Post interest for that month.\n6. Confirm that: Interest and accrued interest for the month post correctly, reflecting the reduced balance after the mid-month write-off.",
+    "Interest and accrued interest for the month post correctly, reflecting the reduced balance after the mid-month write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 21,
+   "values": [
+    "ICM-007",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nFull write-off date: 2026-08-15 (mid-month)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Perform a full write-off on the loan account dated 2026-08-15.\n5. Check the accrued interest amount recorded up to the write-off date.\n6. Confirm that: Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/365 day-count convention), with no further accrual posted after that date.",
+    "Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/365 day-count convention), with no further accrual posted after that date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 22,
+   "values": [
+    "ICM-008",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nPayoff date: 2026-08-15 (mid-month)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Pay off the loan account in full dated 2026-08-15.\n5. Check the accrued interest amount recorded up to the payoff date.\n6. Confirm that: Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 23,
+   "values": [
+    "ICM-009",
+    "Interest rate values in the payment schedule are correctly calculated for each month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nPayment schedule: full term",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 and go to its Payment schedule tab.\n4. Compare the interest rate value applied for each month against the expected 5.000% rate.\n5. Confirm that: Every month of the payment schedule uses the correct interest rate value in its calculation, with no rate discrepancies across the term.",
+    "Every month of the payment schedule uses the correct interest rate value in its calculation, with no rate discrepancies across the term.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 24,
+   "values": [
+    "ICM-010",
+    "Interest calculation is correctly based on the second month\u2019s beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Simple interest, with payment schedule\nFirst month interest: already posted",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, for which the first month's interest has already been posted.\n4. Review the second month's interest calculation and identify the beginning balance it uses.\n5. Confirm that: The second month's interest is calculated from the second month's beginning balance (the post-first-month balance), not from the original principal amount.",
+    "The second month's interest is calculated from the second month's beginning balance (the post-first-month balance), not from the original principal amount.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 25,
+   "values": [
+    "Revolving, Actual/365, Compound interest, with payment schedule",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 26,
+   "values": [
+    "ICM-011",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 (Revolving, Actual/365, Compound interest, with payment schedule), newly originated and due for its first interest posting.\n4. Run/post interest for the first month.\n5. Confirm that: Interest posts successfully for the first month, and the posted amount matches the expected Actual/365 compound-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "Interest posts successfully for the first month, and the posted amount matches the expected Actual/365 compound-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 27,
+   "values": [
+    "ICM-012",
+    "The accrued interest value from the Loan Details API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nAs-of date: current business date (inclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "The Loan Details API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 28,
+   "values": [
+    "ICM-013",
+    "The accrued interest value from the Loan Details API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nAs-of date: current business date (exclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value against the day-count contract for exclusive accrual.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 29,
+   "values": [
+    "ICM-014",
+    "Accrued interest is correctly recalculated after making a mid-month principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nAdjustment date: 2026-08-15\nAdjustment type: Principal",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle with interest already accruing.\n4. Post a Principal adjustment dated 2026-08-15.\n5. Re-open the loan account and check the accrued interest value.\n6. Confirm that: After the principal adjustment posts, the accrued interest value recalculates correctly, reflecting the adjusted principal balance from 2026-08-15 forward.",
+    "After the principal adjustment posts, the accrued interest value recalculates correctly, reflecting the adjusted principal balance from 2026-08-15 forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 30,
+   "values": [
+    "ICM-015",
+    "Accrued interest is correctly recalculated after making a mid-month interest adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nAdjustment date: 2026-08-15\nAdjustment type: Interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle with interest already accruing.\n4. Post an Interest adjustment dated 2026-08-15.\n5. Re-open the loan account and check the accrued interest value.\n6. Confirm that: After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 31,
+   "values": [
+    "ICM-016",
+    "Interest and accrued values are correctly calculated after performing a mid-month principal write-off",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nWrite-off date: mid-month (e.g. 15th)\nWrite-off type: Principal",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle.\n4. Perform a mid-month principal write-off dated the 15th.\n5. Post interest for that month.\n6. Confirm that: Interest and accrued interest for the month post correctly, reflecting the reduced principal balance after the mid-month principal write-off.",
+    "Interest and accrued interest for the month post correctly, reflecting the reduced principal balance after the mid-month principal write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: values are matching for 1140 acc, can use it for example"
+   ]
+  },
+  {
+   "row": 32,
+   "values": [
+    "ICM-017",
+    "Interest and accrued values are correctly calculated after performing a mid-month interest write-off",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nWrite-off date: mid-month (e.g. 15th)\nWrite-off type: Interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle.\n4. Perform a mid-month interest write-off dated the 15th.\n5. Post interest for that month.\n6. Confirm that: Interest and accrued interest for the month post correctly, reflecting the mid-month interest write-off.",
+    "Interest and accrued interest for the month post correctly, reflecting the mid-month interest write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 33,
+   "values": [
+    "ICM-018",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nFull write-off date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Perform a full write-off on the loan account.\n5. Check the accrued interest amount recorded up to the write-off date.\n6. Confirm that: Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/365 day-count convention), with no further accrual posted after that date.",
+    "Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/365 day-count convention), with no further accrual posted after that date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: cz fetch API is not fetching including that day"
+   ]
+  },
+  {
+   "row": 34,
+   "values": [
+    "ICM-019",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nPayoff date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Pay off the loan account in full.\n5. Check the accrued interest amount recorded up to the payoff date.\n6. Confirm that: Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: Overpayment can not be created"
+   ]
+  },
+  {
+   "row": 35,
+   "values": [
+    "ICM-020",
+    "Interest rate values in the payment schedule are correctly calculated for each month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nPayment schedule: full term",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 and go to its Payment schedule tab.\n4. Compare the interest rate value applied for each month against the expected 5.000% rate.\n5. Confirm that: Every month of the payment schedule uses the correct interest rate value in its compound-interest calculation, with no rate discrepancies across the term.",
+    "Every month of the payment schedule uses the correct interest rate value in its compound-interest calculation, with no rate discrepancies across the term.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: origination - 5000, rate 3.1234\nfor january, int is calculated upto 30th not 31, though its actual/365????\nother months are calculated upto last day"
+   ]
+  },
+  {
+   "row": 36,
+   "values": [
+    "ICM-021",
+    "Interest calculation is correctly based on the second month\u2019s beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/365, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/365, Compound interest, with payment schedule\nFirst month interest: already posted",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, for which the first month's interest has already been posted.\n4. Review the second month's interest calculation and identify the beginning balance it uses.\n5. Confirm that: The second month's compound interest is calculated from the second month's beginning balance (the post-first-month balance, including any capitalized interest), not from the original principal amount.",
+    "The second month's compound interest is calculated from the second month's beginning balance (the post-first-month balance, including any capitalized interest), not from the original principal amount.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 37,
+   "values": [
+    "Revolving, Actual/360, Simple interest, with payment schedule",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 38,
+   "values": [
+    "ICM-022",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 (Revolving, Actual/360, Simple interest, with payment schedule), newly originated and due for its first interest posting.\n4. Run/post interest for the first month.\n5. Confirm that: Interest posts successfully for the first month, and the posted amount matches the expected Actual/360 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "Interest posts successfully for the first month, and the posted amount matches the expected Actual/360 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 39,
+   "values": [
+    "ICM-023",
+    "The accrued interest value from the Loan Details API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nAs-of date: current business date (inclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "The Loan Details API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 40,
+   "values": [
+    "ICM-024",
+    "The accrued interest value from the Loan Details API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nAs-of date: current business date (exclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value against the day-count contract for exclusive accrual.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 41,
+   "values": [
+    "ICM-025",
+    "Accrued interest is correctly recalculated after making a mid-month adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nAdjustment date: 2026-08-15\nAdjustment type: Interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle with interest already accruing.\n4. Post an Interest adjustment dated 2026-08-15.\n5. Re-open the loan account and check the accrued interest value.\n6. Confirm that: After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 42,
+   "values": [
+    "ICM-026",
+    "Interest is properly calculated when second month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nFirst month interest: already posted\nSecond month opening balance: from posted schedule",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, for which the first month's interest has already been posted, establishing the second month's opening balance.\n4. Run/post interest for the second month.\n5. Confirm that: Second-month interest posts successfully, and the posted amount is calculated from the second month's beginning balance (the post-first-month-posting balance), not the original principal.",
+    "Second-month interest posts successfully, and the posted amount is calculated from the second month's beginning balance (the post-first-month-posting balance), not the original principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 43,
+   "values": [
+    "ICM-027",
+    "Interest and accrued values are correctly calculated after performing a mid-month write-off + adjustment and posting interest for that month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nWrite-off date: mid-month (e.g. 15th)\nAdjustment: applied in the same period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle.\n4. Perform a mid-month write-off dated the 15th, then post an adjustment within the same period.\n5. Post interest for that month.\n6. Confirm that: Interest and accrued interest for the month post correctly, reflecting both the mid-month write-off and the adjustment applied in the same period.",
+    "Interest and accrued interest for the month post correctly, reflecting both the mid-month write-off and the adjustment applied in the same period.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: 2257- check\n2261- pass"
+   ]
+  },
+  {
+   "row": 44,
+   "values": [
+    "ICM-028",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nFull write-off date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Perform a full write-off on the loan account.\n5. Check the accrued interest amount recorded up to the write-off date.\n6. Confirm that: Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/360 day-count convention), with no further accrual posted after that date.",
+    "Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/360 day-count convention), with no further accrual posted after that date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 45,
+   "values": [
+    "ICM-029",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nPayoff date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Pay off the loan account in full.\n5. Check the accrued interest amount recorded up to the payoff date.\n6. Confirm that: Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 46,
+   "values": [
+    "ICM-030",
+    "Interest rate values in the payment schedule are correctly calculated for each month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nPayment schedule: full term",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 and go to its Payment schedule tab.\n4. Compare the interest rate value applied for each month against the expected 5.000% rate.\n5. Confirm that: Every month of the payment schedule uses the correct interest rate value in its calculation, with no rate discrepancies across the term.",
+    "Every month of the payment schedule uses the correct interest rate value in its calculation, with no rate discrepancies across the term.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 47,
+   "values": [
+    "ICM-031",
+    "Interest calculation is correctly based on the second month\u2019s beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Simple interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Simple interest, with payment schedule\nFirst month interest: already posted",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, for which the first month's interest has already been posted.\n4. Review the second month's interest calculation and identify the beginning balance it uses.\n5. Confirm that: The second month's interest is calculated from the second month's beginning balance (the post-first-month balance), not from the original principal amount.",
+    "The second month's interest is calculated from the second month's beginning balance (the post-first-month balance), not from the original principal amount.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 48,
+   "values": [
+    "Revolving, Actual/360, Compound interest, with payment schedule",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 49,
+   "values": [
+    "ICM-032",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 (Revolving, Actual/360, Compound interest, with payment schedule), newly originated and due for its first interest posting.\n4. Run/post interest for the first month.\n5. Confirm that: Interest posts successfully for the first month, and the posted amount matches the expected Actual/360 compound-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "Interest posts successfully for the first month, and the posted amount matches the expected Actual/360 compound-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 50,
+   "values": [
+    "ICM-033",
+    "The accrued interest value from the Loan Details API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nAs-of date: current business date (inclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "The Loan Details API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 51,
+   "values": [
+    "ICM-034",
+    "The accrued interest value from the Loan Details API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nAs-of date: current business date (exclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Details API for the loan account and inspect the returned accrued interest value against the day-count contract for exclusive accrual.\n5. Confirm that: The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "The Loan Details API response returns an accrued interest amount that excludes today from the accrual day count, consistent with the API's documented exclusive-accrual behavior.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 52,
+   "values": [
+    "ICM-035",
+    "Accrued interest is correctly recalculated after making a mid-month adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nAdjustment date: 2026-08-15\nAdjustment type: Interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle with interest already accruing.\n4. Post an Interest adjustment dated 2026-08-15.\n5. Re-open the loan account and check the accrued interest value.\n6. Confirm that: After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "After the interest adjustment posts, the accrued interest value recalculates correctly, reflecting the adjustment from 2026-08-15 forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 53,
+   "values": [
+    "ICM-036",
+    "Interest is properly calculated when second month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nFirst month interest: already posted\nSecond month opening balance: from posted schedule",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, for which the first month's interest has already been posted, establishing the second month's opening balance.\n4. Run/post interest for the second month.\n5. Confirm that: Second-month interest posts successfully, and the posted amount is calculated from the second month's beginning balance (the post-first-month-posting balance, including any capitalized interest), not the original principal.",
+    "Second-month interest posts successfully, and the posted amount is calculated from the second month's beginning balance (the post-first-month-posting balance, including any capitalized interest), not the original principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 54,
+   "values": [
+    "ICM-037",
+    "Interest and accrued values are correctly calculated after performing a mid-month write-off + adjustment and posting interest for that month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nWrite-off date: mid-month (e.g. 15th)\nAdjustment: applied in the same period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle.\n4. Perform a mid-month write-off dated the 15th, then post an adjustment within the same period.\n5. Post interest for that month.\n6. Confirm that: Interest and accrued interest for the month post correctly, reflecting both the mid-month write-off and the adjustment applied in the same period.",
+    "Interest and accrued interest for the month post correctly, reflecting both the mid-month write-off and the adjustment applied in the same period.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 55,
+   "values": [
+    "ICM-038",
+    "Interest and accrued values are correctly calculated after performing a mid-month adjustment and posting interest for that month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nAdjustment date: mid-month (e.g. 15th)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, mid-cycle.\n4. Post a mid-month adjustment dated the 15th.\n5. Post interest for that month.\n6. Confirm that: Interest and accrued interest for the month post correctly, reflecting the mid-month adjustment.",
+    "Interest and accrued interest for the month post correctly, reflecting the mid-month adjustment.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 56,
+   "values": [
+    "ICM-039",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nFull write-off date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Perform a full write-off on the loan account.\n5. Check the accrued interest amount recorded up to the write-off date.\n6. Confirm that: Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/360 day-count convention), with no further accrual posted after that date.",
+    "Accrued interest is calculated only through the full write-off date (inclusive, per the Actual/360 day-count convention), with no further accrual posted after that date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 57,
+   "values": [
+    "ICM-040",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nPayoff date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Pay off the loan account in full.\n5. Check the accrued interest amount recorded up to the payoff date.\n6. Confirm that: Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 58,
+   "values": [
+    "ICM-041",
+    "Interest rate values in the payment schedule are correctly calculated for each month",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nPayment schedule: full term",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 and go to its Payment schedule tab.\n4. Compare the interest rate value applied for each month against the expected 5.000% rate.\n5. Confirm that: Every month of the payment schedule uses the correct interest rate value in its compound-interest calculation, with no rate discrepancies across the term.",
+    "Every month of the payment schedule uses the correct interest rate value in its compound-interest calculation, with no rate discrepancies across the term.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 59,
+   "values": [
+    "ICM-042",
+    "Interest calculation is correctly based on the second month\u2019s beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Revolving, Actual/360, Compound interest, with payment schedule is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Revolving, Actual/360, Compound interest, with payment schedule\nFirst month interest: already posted",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, for which the first month's interest has already been posted.\n4. Review the second month's interest calculation and identify the beginning balance it uses.\n5. Confirm that: The second month's compound interest is calculated from the second month's beginning balance (the post-first-month balance), not from the original principal amount.",
+    "The second month's compound interest is calculated from the second month's beginning balance (the post-first-month balance), not from the original principal amount.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 60,
+   "values": [
+    "Non-revolving, 30/360, Simple interest",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 61,
+   "values": [
+    "ICM-043",
+    "The payment schedule is correctly generated for an amortized loan account with 30-360-simple loan type",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type configuration: Non-revolving, 30/360, Simple interest\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Click '+Create' to set up a new amortized loan account with loan type Non-revolving, 30/360, Simple interest.\n4. Save the loan account and open its Payment schedule tab.\n5. Confirm that: The loan account saves successfully and a payment schedule generates correctly for the Non-revolving, 30/360, Simple interest configuration, with entries for each period of the term.",
+    "The loan account saves successfully and a payment schedule generates correctly for the Non-revolving, 30/360, Simple interest configuration, with entries for each period of the term.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: type - 639, 659\naccount - 2130"
+   ]
+  },
+  {
+   "row": 62,
+   "values": [
+    "ICM-044",
+    "All values in the initial payment schedule are correctly calculated",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's Payment schedule tab (initial schedule already generated).\n4. Review each period's principal, interest, and beginning/ending balance columns.\n5. Confirm that: Every period of the initial payment schedule shows correctly calculated principal, interest, and beginning/ending balance values, consistent with a 30/360 simple-interest amortization.",
+    "Every period of the initial payment schedule shows correctly calculated principal, interest, and beginning/ending balance values, consistent with a 30/360 simple-interest amortization.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 63,
+   "values": [
+    "ICM-045",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, newly originated and due for its first interest posting.\n4. Run/post interest for the first month.\n5. Confirm that: Interest posts successfully for the first month, and the posted amount matches the expected 30/360 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "Interest posts successfully for the first month, and the posted amount matches the expected 30/360 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 64,
+   "values": [
+    "ICM-046",
+    "The accrued interest value from the Loan Balance API is correctly calculated including the current day for origination month",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nAs-of date: current business date (inclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today in its origination month.\n4. Call the Loan Balance API for the loan account and inspect the returned accrued interest value.\n5. Confirm that: The Loan Balance API response returns an accrued interest amount that counts today as an accrual day for the origination month (calculated through and including the current business date).",
+    "The Loan Balance API response returns an accrued interest amount that counts today as an accrual day for the origination month (calculated through and including the current business date).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 65,
+   "values": [
+    "ICM-047",
+    "The accrued interest value from the Loan Balance API is correctly calculated excluding the current day for origination month",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nAs-of date: current business date (exclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today in its origination month.\n4. Call the Loan Balance API for the loan account and inspect the returned accrued interest value against the exclusive day-count expectation.\n5. Confirm that: The Loan Balance API response returns an accrued interest amount that excludes today from the origination month's accrual day count.",
+    "The Loan Balance API response returns an accrued interest amount that excludes today from the origination month's accrual day count.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 66,
+   "values": [
+    "ICM-048",
+    "The payment schedule is correctly re-amortized after a mid-month principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nAdjustment date: mid-month\nAdjustment type: Principal",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month Principal adjustment, triggering reamortization.\n5. Open the re-amortized Payment schedule tab.\n6. Confirm that: The payment schedule regenerates correctly after the mid-month principal adjustment, reflecting the adjusted principal balance across the remaining periods.",
+    "The payment schedule regenerates correctly after the mid-month principal adjustment, reflecting the adjusted principal balance across the remaining periods.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 67,
+   "values": [
+    "ICM-049",
+    "Re-amortized schedule values are correctly calculated after the principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nPrincipal adjustment: already applied, reamortization run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's Payment schedule tab (a mid-month principal adjustment has already been applied and reamortization has run).\n4. Review the re-amortized schedule's principal, interest, and balance values period by period.\n5. Confirm that: All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal adjustment.",
+    "All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal adjustment.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 68,
+   "values": [
+    "ICM-050",
+    "The payment schedule is correctly re-amortized after a mid-month principal writeoff. with correct beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nWrite-off date: mid-month\nWrite-off type: Principal",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Perform a mid-month Principal write-off, triggering reamortization.\n5. Open the re-amortized Payment schedule tab and note the beginning balance of the first re-amortized period.\n6. Confirm that: The payment schedule regenerates correctly after the mid-month principal write-off, and the re-amortized schedule's first period carries the correct post-write-off beginning balance.",
+    "The payment schedule regenerates correctly after the mid-month principal write-off, and the re-amortized schedule's first period carries the correct post-write-off beginning balance.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 69,
+   "values": [
+    "ICM-051",
+    "Re-amortized schedule values are correctly calculated after the principal writeoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nPrincipal write-off: already applied, reamortization run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's Payment schedule tab (a mid-month principal write-off has already been applied and reamortization has run).\n4. Review the re-amortized schedule's principal, interest, and balance values period by period.\n5. Confirm that: All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal write-off.",
+    "All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 70,
+   "values": [
+    "ICM-052",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nFull write-off date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Perform a full write-off on the loan account.\n5. Check the accrued interest amount recorded up to the write-off date.\n6. Confirm that: Accrued interest is calculated only through the full write-off date (inclusive, per the 30/360 day-count convention), with no further accrual posted after that date.",
+    "Accrued interest is calculated only through the full write-off date (inclusive, per the 30/360 day-count convention), with no further accrual posted after that date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 71,
+   "values": [
+    "ICM-053",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nPayoff date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Pay off the loan account in full.\n5. Check the accrued interest amount recorded up to the payoff date.\n6. Confirm that: Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 72,
+   "values": [
+    "ICM-054",
+    "All months are considered 30 days for int calculation (When reamortizing on 12th, new first month's calculation is from 12 to next month full- 30 days, not actual days of that month)",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Simple interest\nReamortization date: 12th of the month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, using the 30/360 day-count convention.\n4. Reamortize the loan on the 12th of the month.\n5. Inspect the day count used for the new first month's interest calculation on the re-amortized schedule.\n6. Confirm that: The new first month's interest, following reamortization on the 12th, is calculated using a 30-day month convention (from the 12th through the 30-day equivalent), not the actual calendar day count.",
+    "The new first month's interest, following reamortization on the 12th, is calculated using a 30-day month convention (from the 12th through the 30-day equivalent), not the actual calendar day count.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 73,
+   "values": [
+    "Non-revolving, 30/360, Compound interest",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 74,
+   "values": [
+    "ICM-055",
+    "The payment schedule is correctly generated for an amortized loan account with 30-360-simple loan type",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type configuration: Non-revolving, 30/360, Compound interest\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Click '+Create' to set up a new amortized loan account with loan type Non-revolving, 30/360, Compound interest.\n4. Save the loan account and open its Payment schedule tab.\n5. Confirm that: The loan account saves successfully and a payment schedule generates correctly for the Non-revolving, 30/360, Compound interest configuration, with entries for each period of the term.",
+    "The loan account saves successfully and a payment schedule generates correctly for the Non-revolving, 30/360, Compound interest configuration, with entries for each period of the term.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: loan type - 640, 660\nacc- 2131\nsecond month interest"
+   ]
+  },
+  {
+   "row": 75,
+   "values": [
+    "ICM-056",
+    "All values in the initial payment schedule are correctly calculated",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's Payment schedule tab (initial schedule already generated).\n4. Review each period's principal, interest, and beginning/ending balance columns.\n5. Confirm that: Every period of the initial payment schedule shows correctly calculated principal, interest, and beginning/ending balance values, consistent with a 30/360 compound-interest amortization.",
+    "Every period of the initial payment schedule shows correctly calculated principal, interest, and beginning/ending balance values, consistent with a 30/360 compound-interest amortization.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 76,
+   "values": [
+    "ICM-057",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, newly originated and due for its first interest posting.\n4. Run/post interest for the first month.\n5. Confirm that: Interest posts successfully for the first month, and the posted amount matches the expected 30/360 compound-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "Interest posts successfully for the first month, and the posted amount matches the expected 30/360 compound-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 77,
+   "values": [
+    "ICM-058",
+    "The accrued interest value from the Loan Balance API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nAs-of date: current business date (inclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Balance API for the loan account and inspect the returned accrued interest value.\n5. Confirm that: The Loan Balance API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "The Loan Balance API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 78,
+   "values": [
+    "ICM-059",
+    "The accrued interest value from the Loan Balance API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nAs-of date: current business date (exclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Balance API for the loan account and inspect the returned accrued interest value against the exclusive day-count expectation.\n5. Confirm that: The Loan Balance API response returns an accrued interest amount that excludes today from the accrual day count.",
+    "The Loan Balance API response returns an accrued interest amount that excludes today from the accrual day count.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 79,
+   "values": [
+    "ICM-060",
+    "The payment schedule is correctly re-amortized after a mid-month principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nAdjustment date: mid-month\nAdjustment type: Principal",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month Principal adjustment, triggering reamortization.\n5. Open the re-amortized Payment schedule tab.\n6. Confirm that: The payment schedule regenerates correctly after the mid-month principal adjustment, reflecting the adjusted principal balance across the remaining periods.",
+    "The payment schedule regenerates correctly after the mid-month principal adjustment, reflecting the adjusted principal balance across the remaining periods.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 80,
+   "values": [
+    "ICM-061",
+    "Re-amortized schedule values are correctly calculated after the principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nPrincipal adjustment: already applied, reamortization run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's Payment schedule tab (a mid-month principal adjustment has already been applied and reamortization has run).\n4. Review the re-amortized schedule's principal, interest, and balance values period by period.\n5. Confirm that: All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal adjustment.",
+    "All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal adjustment.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 81,
+   "values": [
+    "ICM-062",
+    "The payment schedule is correctly re-amortized after a mid-month principal writeoff. with correct beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nWrite-off date: mid-month\nWrite-off type: Principal",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Perform a mid-month Principal write-off, triggering reamortization.\n5. Open the re-amortized Payment schedule tab and note the beginning balance of the first re-amortized period.\n6. Confirm that: The payment schedule regenerates correctly after the mid-month principal write-off, and the re-amortized schedule's first period carries the correct post-write-off beginning balance.",
+    "The payment schedule regenerates correctly after the mid-month principal write-off, and the re-amortized schedule's first period carries the correct post-write-off beginning balance.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 82,
+   "values": [
+    "ICM-063",
+    "Re-amortized schedule values are correctly calculated after the principal writeoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nPrincipal write-off: already applied, reamortization run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's Payment schedule tab (a mid-month principal write-off has already been applied and reamortization has run).\n4. Review the re-amortized schedule's principal, interest, and balance values period by period.\n5. Confirm that: All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal write-off.",
+    "All values in the re-amortized payment schedule (principal, interest, beginning/ending balance per period) are correctly recalculated to reflect the principal write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 83,
+   "values": [
+    "ICM-064",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nFull write-off date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Perform a full write-off on the loan account.\n5. Check the accrued interest amount recorded up to the write-off date.\n6. Confirm that: Accrued interest is calculated only through the full write-off date (inclusive, per the 30/360 day-count convention), with no further accrual posted after that date.",
+    "Accrued interest is calculated only through the full write-off date (inclusive, per the 30/360 day-count convention), with no further accrual posted after that date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 84,
+   "values": [
+    "ICM-065",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nPayoff date: mid-month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Pay off the loan account in full.\n5. Check the accrued interest amount recorded up to the payoff date.\n6. Confirm that: Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "Accrued interest is calculated only through the payoff date, with no accrual posted for any period after payoff.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 85,
+   "values": [
+    "ICM-066",
+    "All months are considered 30 days for int calculation (When reamortizing on 12th, new first month's calculation is from 12 to next month full- 30 days, not actual days of that month)",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, 30/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, 30/360, Compound interest\nReamortization date: 12th of the month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, using the 30/360 day-count convention.\n4. Reamortize the loan on the 12th of the month.\n5. Inspect the day count used for the new first month's interest calculation on the re-amortized schedule.\n6. Confirm that: The new first month's compound interest, following reamortization on the 12th, is calculated using a 30-day month convention (from the 12th through the 30-day equivalent), not the actual calendar day count.",
+    "The new first month's compound interest, following reamortization on the 12th, is calculated using a 30-day month convention (from the 12th through the 30-day equivalent), not the actual calendar day count.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 86,
+   "values": [
+    "Non-revolving, Actual/360, Simple interest",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 87,
+   "values": [
+    "ICM-067",
+    "The payment schedule is correctly generated for an amortized loan account with actual-360-simple loan type",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type configuration: Non-revolving, Actual/360, Simple interest\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Click '+Create' to set up a new amortized loan account with loan type Non-revolving, Actual/360, Simple interest.\n4. Save the loan account and open its Payment schedule tab.\n5. Confirm that: The loan account saves successfully and a payment schedule generates correctly for the Non-revolving, Actual/360, Simple interest configuration, with entries for each period of the term.",
+    "The loan account saves successfully and a payment schedule generates correctly for the Non-revolving, Actual/360, Simple interest configuration, with entries for each period of the term.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: loan type - 641\nacc- 2159"
+   ]
+  },
+  {
+   "row": 88,
+   "values": [
+    "ICM-068",
+    "All values in the initial payment schedule are correctly calculated",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, Actual/360, Simple interest",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001's Payment schedule tab (initial schedule already generated).\n4. Review each period's principal, interest, and beginning/ending balance columns.\n5. Confirm that: Every period of the initial payment schedule shows correctly calculated principal, interest, and beginning/ending balance values, consistent with an Actual/360 simple-interest amortization.",
+    "Every period of the initial payment schedule shows correctly calculated principal, interest, and beginning/ending balance values, consistent with an Actual/360 simple-interest amortization.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 89,
+   "values": [
+    "ICM-069",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, Actual/360, Simple interest\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, newly originated and due for its first interest posting.\n4. Run/post interest for the first month.\n5. Confirm that: Interest posts successfully for the first month, and the posted amount matches the expected Actual/360 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "Interest posts successfully for the first month, and the posted amount matches the expected Actual/360 simple-interest calculation for the 5.000% rate on the $10,000.00 principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 90,
+   "values": [
+    "ICM-070",
+    "The accrued interest value from the Loan Balance API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, Actual/360, Simple interest\nAs-of date: current business date (inclusive)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has interest accruing through today.\n4. Call the Loan Balance API for the loan account and inspect the returned accrued interest value.\n5. Confirm that: The Loan Balance API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "The Loan Balance API response returns an accrued interest amount that counts today as an accrual day (calculated through and including the current business date).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 91,
+   "values": [
+    "ICM-071",
+    "The accrued interest value from the Loan Balance API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Simple interest)\nAs-of date: today's business date (exclusive of current day)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 (configured Non-revolving, Actual/360, Simple interest) with accrued interest through today.\n4. Call the Loan Balance API for this loan account with the as-of date set to today, and inspect the returned accrued interest amount.\n5. Recalculate the expected accrued interest excluding today from the day count and compare it to the API result.\n6. Confirm that: The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/360 simple-interest calculation.",
+    "The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/360 simple-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 92,
+   "values": [
+    "ICM-072",
+    "The payment schedule is correctly re-amortized after a mid-month principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Simple interest)\nAdjustment date: 15th of the current period\nAdjustment type: Principal adjustment (decrease)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal adjustment transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 93,
+   "values": [
+    "ICM-073",
+    "Re-amortized schedule values are correctly calculated after the principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Simple interest)\nPrincipal adjustment already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal adjustment has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 94,
+   "values": [
+    "ICM-074",
+    "The payment schedule is correctly re-amortized after a mid-month principal writeoff.with correct beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Simple interest)\nWrite-off date: 15th of the current period\nWrite-off type: Principal (partial)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal write-off transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 95,
+   "values": [
+    "ICM-075",
+    "Re-amortized schedule values are correctly calculated after the principal writeoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Simple interest)\nPrincipal write-off already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal write-off has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 96,
+   "values": [
+    "ICM-076",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Simple interest)\nFull write-off date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Post a full write-off transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the full write-off date per the Actual/360 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "Accrued interest is calculated only through the full write-off date per the Actual/360 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 97,
+   "values": [
+    "ICM-077",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Simple interest)\nPayoff date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Process a full payoff transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 98,
+   "values": [
+    "Non-revolving, Actual/360, Compound interest",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 99,
+   "values": [
+    "ICM-078",
+    "The payment schedule is correctly generated for an amortized loan account with actual-360-compound loan type",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, Actual/360, Compound interest\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Click '+Create' and set up a new amortized loan account using a loan type configured as Non-revolving, Actual/360, Compound interest.\n4. Save the loan account and open its Payment Schedule tab.\n5. Confirm that: The loan account saves successfully and the payment schedule generates with the expected number of periods and values consistent with a Non-revolving, Actual/360, Compound interest configuration.",
+    "The loan account saves successfully and the payment schedule generates with the expected number of periods and values consistent with a Non-revolving, Actual/360, Compound interest configuration.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: type - 661"
+   ]
+  },
+  {
+   "row": 100,
+   "values": [
+    "ICM-079",
+    "All values in the initial payment schedule are correctly calculated",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nInitial payment schedule already generated",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 and go to its Payment Schedule tab.\n4. Review the principal, interest, and beginning/ending balance columns for each period in the initial schedule.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the initial payment schedule shows principal, interest, and beginning/ending balance values matching the expected Actual/360 compound-interest calculation.",
+    "Every period in the initial payment schedule shows principal, interest, and beginning/ending balance values matching the expected Actual/360 compound-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 101,
+   "values": [
+    "ICM-080",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, originated 2026-08-01 with principal 10000.00 at 5.000%, which is due for its first interest posting.\n4. Run/post interest for the first month.\n5. Open the posted transaction and record the posted interest amount.\n6. Confirm that: The posted first-month interest amount matches the expected calculation of principal x rate x (actual days / 360), for the Actual/360 compound-interest configuration.",
+    "The posted first-month interest amount matches the expected calculation of principal x rate x (actual days / 360), for the Actual/360 compound-interest configuration.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 102,
+   "values": [
+    "ICM-081",
+    "The accrued interest value from the Loan Balance API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nAs-of date: today's business date (inclusive of current day)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has accrued interest through today.\n4. Call the Loan Balance API for this loan account with the as-of date set to today, and inspect the returned accrued interest amount.\n5. Recalculate the expected accrued interest including today in the day count and compare it to the API result.\n6. Confirm that: The Loan Balance API returns an accrued interest value calculated including the current day in the day count, matching the expected Actual/360 compound-interest calculation.",
+    "The Loan Balance API returns an accrued interest value calculated including the current day in the day count, matching the expected Actual/360 compound-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 103,
+   "values": [
+    "ICM-082",
+    "The accrued interest value from the Loan Balance API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nAs-of date: today's business date (exclusive of current day)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has accrued interest through today.\n4. Call the Loan Balance API for this loan account with the as-of date set to today, and inspect the returned accrued interest amount.\n5. Recalculate the expected accrued interest excluding today from the day count and compare it to the API result.\n6. Confirm that: The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/360 compound-interest calculation.",
+    "The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/360 compound-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 104,
+   "values": [
+    "ICM-083",
+    "The payment schedule is correctly re-amortized after a mid-month principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nAdjustment date: 15th of the current period\nAdjustment type: Principal adjustment (decrease)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal adjustment transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 105,
+   "values": [
+    "ICM-084",
+    "Re-amortized schedule values are correctly calculated after the principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nPrincipal adjustment already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal adjustment has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 106,
+   "values": [
+    "ICM-085",
+    "The payment schedule is correctly re-amortized after a mid-month principal writeoff,with correct beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nWrite-off date: 15th of the current period\nWrite-off type: Principal (partial)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal write-off transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 107,
+   "values": [
+    "ICM-086",
+    "Re-amortized schedule values are correctly calculated after the principal writeoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nPrincipal write-off already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal write-off has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 108,
+   "values": [
+    "ICM-087",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nFull write-off date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Post a full write-off transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the full write-off date per the Actual/360 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "Accrued interest is calculated only through the full write-off date per the Actual/360 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 109,
+   "values": [
+    "ICM-088",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/360, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/360, Compound interest)\nPayoff date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Process a full payoff transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 110,
+   "values": [
+    "Non-revolving, Actual/365, Simple interest",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 111,
+   "values": [
+    "ICM-089",
+    "The payment schedule is correctly generated for an amortized loan account with actual-365-simple loan type",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, Actual/365, Simple interest\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Click '+Create' and set up a new amortized loan account using a loan type configured as Non-revolving, Actual/365, Simple interest.\n4. Save the loan account and open its Payment Schedule tab.\n5. Confirm that: The loan account saves successfully and the payment schedule generates with the expected number of periods and values consistent with a Non-revolving, Actual/365, Simple interest configuration.",
+    "The loan account saves successfully and the payment schedule generates with the expected number of periods and values consistent with a Non-revolving, Actual/365, Simple interest configuration.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: 2248. 2255"
+   ]
+  },
+  {
+   "row": 112,
+   "values": [
+    "ICM-090",
+    "All values in the initial payment schedule are correctly calculated",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nInitial payment schedule already generated",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 and go to its Payment Schedule tab.\n4. Review the principal, interest, and beginning/ending balance columns for each period in the initial schedule.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the initial payment schedule shows principal, interest, and beginning/ending balance values matching the expected Actual/365 simple-interest calculation.",
+    "Every period in the initial payment schedule shows principal, interest, and beginning/ending balance values matching the expected Actual/365 simple-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 113,
+   "values": [
+    "ICM-091",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, originated 2026-08-01 with principal 10000.00 at 5.000%, which is due for its first interest posting.\n4. Run/post interest for the first month.\n5. Open the posted transaction and record the posted interest amount.\n6. Confirm that: The posted first-month interest amount matches the expected calculation of principal x rate x (actual days / 365), for the Actual/365 simple-interest configuration.",
+    "The posted first-month interest amount matches the expected calculation of principal x rate x (actual days / 365), for the Actual/365 simple-interest configuration.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 114,
+   "values": [
+    "ICM-092",
+    "The accrued interest value from the Loan Balance API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nAs-of date: today's business date (inclusive of current day)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has accrued interest through today.\n4. Call the Loan Balance API for this loan account with the as-of date set to today, and inspect the returned accrued interest amount.\n5. Recalculate the expected accrued interest including today in the day count and compare it to the API result.\n6. Confirm that: The Loan Balance API returns an accrued interest value calculated including the current day in the day count, matching the expected Actual/365 simple-interest calculation.",
+    "The Loan Balance API returns an accrued interest value calculated including the current day in the day count, matching the expected Actual/365 simple-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 115,
+   "values": [
+    "ICM-093",
+    "The accrued interest value from the Loan Balance API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nAs-of date: today's business date (exclusive of current day)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has accrued interest through today.\n4. Call the Loan Balance API for this loan account with the as-of date set to today, and inspect the returned accrued interest amount.\n5. Recalculate the expected accrued interest excluding today from the day count and compare it to the API result.\n6. Confirm that: The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/365 simple-interest calculation.",
+    "The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/365 simple-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 116,
+   "values": [
+    "ICM-094",
+    "The payment schedule is correctly re-amortized after a mid-month principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nAdjustment date: 15th of the current period\nAdjustment type: Principal adjustment (decrease)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal adjustment transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 117,
+   "values": [
+    "ICM-095",
+    "Re-amortized schedule values are correctly calculated after the principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nPrincipal adjustment already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal adjustment has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 118,
+   "values": [
+    "ICM-096",
+    "Interest is properly calculated when second month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nFirst month interest: already posted\nSecond month opening balance: taken from posted schedule",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which the first month's interest has already been posted, establishing the second month's opening balance.\n4. Run/post interest for the second month.\n5. Open the posted transaction and record the posted interest amount.\n6. Confirm that: The posted second-month interest amount is calculated from the second month's beginning balance (after the first month's posting), not from the original loan principal.",
+    "The posted second-month interest amount is calculated from the second month's beginning balance (after the first month's posting), not from the original loan principal.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 119,
+   "values": [
+    "ICM-097",
+    "The payment schedule is correctly re-amortized after a mid-month principal writeoff, beginning balance is correctly calculated",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nWrite-off date: 15th of the current period\nWrite-off type: Principal (partial)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal write-off transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 120,
+   "values": [
+    "ICM-098",
+    "Re-amortized schedule values are correctly calculated after the principal writeoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nPrincipal write-off already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal write-off has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: check with 2255"
+   ]
+  },
+  {
+   "row": 121,
+   "values": [
+    "ICM-099",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nFull write-off date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Post a full write-off transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the full write-off date per the Actual/365 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "Accrued interest is calculated only through the full write-off date per the Actual/365 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 122,
+   "values": [
+    "ICM-100",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Simple interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Simple interest)\nPayoff date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Process a full payoff transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 123,
+   "values": [
+    "Non-revolving, Actual/365, Compound interest",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 124,
+   "values": [
+    "ICM-101",
+    "The payment schedule is correctly generated for an amortized loan account with actual-365-compound loan type",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nLoan type: Non-revolving, Actual/365, Compound interest\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Click '+Create' and set up a new amortized loan account using a loan type configured as Non-revolving, Actual/365, Compound interest.\n4. Save the loan account and open its Payment Schedule tab.\n5. Confirm that: The loan account saves successfully and the payment schedule generates with the expected number of periods and values consistent with a Non-revolving, Actual/365, Compound interest configuration.",
+    "The loan account saves successfully and the payment schedule generates with the expected number of periods and values consistent with a Non-revolving, Actual/365, Compound interest configuration.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: type- 663\nacc- 2153,2156"
+   ]
+  },
+  {
+   "row": 125,
+   "values": [
+    "ICM-102",
+    "All values in the initial payment schedule are correctly calculated",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nInitial payment schedule already generated",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001 and go to its Payment Schedule tab.\n4. Review the principal, interest, and beginning/ending balance columns for each period in the initial schedule.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the initial payment schedule shows principal, interest, and beginning/ending balance values matching the expected Actual/365 compound-interest calculation.",
+    "Every period in the initial payment schedule shows principal, interest, and beginning/ending balance values matching the expected Actual/365 compound-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 126,
+   "values": [
+    "ICM-103",
+    "Interest is properly calculated when first month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001\nOrigination date: 2026-08-01\nPrincipal: 10000.00\nInterest rate: 5.000%",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, originated 2026-08-01 with principal 10000.00 at 5.000%, which is due for its first interest posting.\n4. Run/post interest for the first month.\n5. Open the posted transaction and record the posted interest amount.\n6. Confirm that: The posted first-month interest amount matches the expected calculation of principal x rate x (actual days / 365), for the Actual/365 compound-interest configuration.",
+    "The posted first-month interest amount matches the expected calculation of principal x rate x (actual days / 365), for the Actual/365 compound-interest configuration.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 127,
+   "values": [
+    "ICM-104",
+    "The accrued interest value from the Loan Balance API is correctly calculated including the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nAs-of date: today's business date (inclusive of current day)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has accrued interest through today.\n4. Call the Loan Balance API for this loan account with the as-of date set to today, and inspect the returned accrued interest amount.\n5. Recalculate the expected accrued interest including today in the day count and compare it to the API result.\n6. Confirm that: The Loan Balance API returns an accrued interest value calculated including the current day in the day count, matching the expected Actual/365 compound-interest calculation.",
+    "The Loan Balance API returns an accrued interest value calculated including the current day in the day count, matching the expected Actual/365 compound-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 128,
+   "values": [
+    "ICM-105",
+    "The accrued interest value from the Loan Balance API is correctly calculated excluding the current day",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nAs-of date: today's business date (exclusive of current day)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has accrued interest through today.\n4. Call the Loan Balance API for this loan account with the as-of date set to today, and inspect the returned accrued interest amount.\n5. Recalculate the expected accrued interest excluding today from the day count and compare it to the API result.\n6. Confirm that: The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/365 compound-interest calculation.",
+    "The Loan Balance API returns an accrued interest value calculated excluding the current day from the day count, matching the expected Actual/365 compound-interest calculation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 129,
+   "values": [
+    "ICM-106",
+    "The payment schedule is correctly re-amortized after a mid-month principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nAdjustment date: 15th of the current period\nAdjustment type: Principal adjustment (decrease)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal adjustment transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "The payment schedule re-amortizes successfully after the mid-month principal adjustment, reflecting the adjusted principal balance from the adjustment date forward.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 130,
+   "values": [
+    "ICM-107",
+    "Re-amortized schedule values are correctly calculated after the principal adjustment",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nPrincipal adjustment already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal adjustment has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal adjustment.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 131,
+   "values": [
+    "ICM-108",
+    "Interest is properly calculated when second month interest is posted",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nFirst month interest: already posted\nSecond month opening balance: taken from posted schedule",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which the first month's interest has already been posted, establishing the second month's opening balance.\n4. Run/post interest for the second month.\n5. Open the posted transaction and record the posted interest amount.\n6. Confirm that: The posted second-month interest amount is calculated from the second month's beginning balance (after the first month's posting), not from the original loan principal, and reflects compounding on that balance.",
+    "The posted second-month interest amount is calculated from the second month's beginning balance (after the first month's posting), not from the original loan principal, and reflects compounding on that balance.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 132,
+   "values": [
+    "ICM-109",
+    "The payment schedule is correctly re-amortized after a mid-month principal writeoff, with correct beginning balance",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nWrite-off date: 15th of the current period\nWrite-off type: Principal (partial)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an active payment schedule.\n4. Post a mid-month (15th) principal write-off transaction on the loan account.\n5. Trigger reamortization and open the resulting payment schedule.\n6. Confirm that: The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "The payment schedule re-amortizes successfully after the mid-month principal write-off, and the re-amortized schedule's beginning balance correctly reflects the reduced principal after the write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 133,
+   "values": [
+    "ICM-110",
+    "Re-amortized schedule values are correctly calculated after the principal writeoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nPrincipal write-off already applied and reamortization already run",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, on which a mid-month principal write-off has already been posted and reamortization has run.\n4. Open the re-amortized payment schedule and review the principal, interest, and balance columns for each period.\n5. Recalculate the expected values for each period and compare them to the displayed schedule.\n6. Confirm that: Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "Every period in the re-amortized schedule (principal, interest, beginning/ending balance) matches the expected recalculated values following the principal write-off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Source note: check with 2250."
+   ]
+  },
+  {
+   "row": 134,
+   "values": [
+    "ICM-111",
+    "Accrued interest is correctly calculated up to the date of full write-off",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nFull write-off date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Post a full write-off transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the full write-off date per the Actual/365 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "Accrued interest is calculated only through the full write-off date per the Actual/365 day-count convention, and no interest accrues on the loan after the write-off date.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 135,
+   "values": [
+    "ICM-112",
+    "Accrued interest is correctly calculated up to the date of loan payoff",
+    "Refer to Common Preconditions above. A loan account configured as Non-revolving, Actual/365, Compound interest is available.",
+    "Loan account: LA-QA-INT-001 (Non-revolving, Actual/365, Compound interest)\nPayoff date: 15th of the current period",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has an outstanding balance and accrued interest.\n4. Process a full payoff transaction on the loan account dated the 15th of the period.\n5. Open the loan account's interest/accrual detail and check the accrued interest amount recorded.\n6. Confirm that: Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "Accrued interest is calculated only through the payoff date, and no interest accrues on the loan after it has been paid off.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 136,
+   "values": [
+    "Additional scenarios / open items",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 137,
+   "values": [
+    "ICM-113",
+    "Check all the accrued for origination month end date, with sccr=true",
+    "Refer to Common Preconditions above.",
+    "Loan account: LA-QA-INT-001\nOrigination date: 2026-08-31 (last calendar day of the month)\nSCCR flag: true",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open (or set up) loan account LA-QA-INT-001, originated 2026-08-31 (last day of the month), with the SCCR flag set to true.\n4. Run/post interest for the origination month and open the resulting accrual detail.\n5. Recalculate the expected accrued interest for a month-end origination with SCCR true and compare it to the posted value.\n6. Confirm that: Accrued interest for the origination month-end date, with SCCR set to true, is calculated correctly with no off-by-one day-count error.",
+    "Accrued interest for the origination month-end date, with SCCR set to true, is calculated correctly with no off-by-one day-count error.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 138,
+   "values": [
+    "ICM-114",
+    "Check with origination date february",
+    "Refer to Common Preconditions above.",
+    "Loan account: LA-QA-INT-002\nOrigination date: 2026-02-01",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open (or set up) loan account LA-QA-INT-002, originated 2026-02-01.\n4. Run/post interest for February and open the resulting accrual/interest detail.\n5. Recalculate the expected interest using February's actual day count (28 days, since 2026 is not a leap year) and compare it to the posted value.\n6. Confirm that: Interest and accrued interest for the February period are calculated using February's actual day count (28 or 29 days as applicable), with no day-count error from the shorter month.",
+    "Interest and accrued interest for the February period are calculated using February's actual day count (28 or 29 days as applicable), with no day-count error from the shorter month.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 139,
+   "values": [
+    "ICM-115",
+    "All the beginning balance is properly calculated",
+    "Refer to Common Preconditions above.",
+    "Loan account: LA-QA-INT-001\nMultiple statement periods already posted",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which has multiple posted statement periods.\n4. Open the payment schedule and review the beginning balance shown for each period across the full loan history.\n5. Compare each period's beginning balance to the prior period's ending balance.\n6. Confirm that: The beginning balance in every period exactly matches the prior period's ending balance, with no discrepancy across the loan's full history.",
+    "The beginning balance in every period exactly matches the prior period's ending balance, with no discrepancy across the loan's full history.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 140,
+   "values": [
+    "ICM-116",
+    "Confirm reamortization-month day count for a 30/360 loan (needs business-rule confirmation)",
+    "Refer to Common Preconditions above.",
+    "Loan account: LA-QA-INT-001 (30/360 day-count convention)\nReamortization date: 12th of the current month",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan account\n3. Open loan account LA-QA-INT-001, which uses a 30/360 day-count convention.\n4. Reamortize the loan on the 12th of the month.\n5. Open the resulting schedule and inspect whether the reamortization month's interest calculation counts 30 days for that month or the actual number of calendar days elapsed.\n6. Confirm that: The reamortization month's interest for the 30/360 loan type is calculated per a confirmed, documented day-count rule; this scenario is flagged as needing business-rule confirmation before it can be marked Passed.",
+    "The reamortization month's interest for the 30/360 loan type is calculated per a confirmed, documented day-count rule; this scenario is flagged as needing business-rule confirmation before it can be marked Passed.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  }
+ ]
+}

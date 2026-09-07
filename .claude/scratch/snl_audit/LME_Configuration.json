@@ -1,0 +1,665 @@
+{
+ "sheet": "LME Configuration",
+ "rows": [
+  {
+   "row": 1,
+   "values": [
+    "Prepared By",
+    "Subah Tasnim Shiary",
+    null,
+    "Total Test Cases",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 2,
+   "values": [
+    "Executed By",
+    "Subah Tasnim Shiary",
+    null,
+    "Passed",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 3,
+   "values": [
+    "Updated On",
+    "2026-08-28 00:00:00",
+    null,
+    "Failed",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 4,
+   "values": [
+    "Time est",
+    "Initial testing:",
+    null,
+    "Untested",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 5,
+   "values": [
+    null,
+    "Bugfix testing:",
+    null,
+    "To be tested",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 6,
+   "values": [
+    "common preconditions",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 7,
+   "values": [
+    "navigation",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 8,
+   "values": [
+    "Lending - Configuration",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 9,
+   "values": [
+    "Common Preconditions",
+    null,
+    "1. User is signed in to Sage Intacct.\n2. The correct Lending Management or Depository Management entity is selected.\n3. The module is enabled for the company.\n4. The user has the permission required for the scenario.\n5. Required master/configuration records are active and available.",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 11,
+   "values": [
+    "Navigation: Applications > Lending Management > Configuration | Client baseline | 30 test cases | Updated 2026-08-29",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 13,
+   "values": [
+    "Test Case ID",
+    "Test Scenario",
+    "Preconditions",
+    "Test Data",
+    "Test Steps",
+    "Expected Result",
+    "Requirement/Jira Reference",
+    "IS Automated",
+    "Status",
+    "Comments"
+   ]
+  },
+  {
+   "row": 14,
+   "values": [
+    "Initial setup (Create configuration)  (10 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 15,
+   "values": [
+    "CFG-001",
+    "Confirm the Lending Management configuration setup is required when the module is first subscribed",
+    "Refer to Common Preconditions above.",
+    "Company: newly subscribed to Lending Management\nConfiguration record: none exists yet",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration for a company where the module was just subscribed\n3. Observe the page presented before any configuration has been saved\n4. Confirm that: The Lending Management configuration page requires the user to complete initial setup (Journals, GL accounts, Banking, Enable functionality, and Interest/invoice/statement generation settings) before Lending Management features can be used.",
+    "The Lending Management configuration page requires the user to complete initial setup (Journals, GL accounts, Banking, Enable functionality, and Interest/invoice/statement generation settings) before Lending Management features can be used.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Setup is a one-time step performed when a new company is created and Lending Management is subscribed."
+   ]
+  },
+  {
+   "row": 16,
+   "values": [
+    "CFG-002",
+    "Confirm the Journals section accepts only active journal values on initial Create",
+    "Refer to Common Preconditions above.",
+    "Write-offs journal: LOAN--Loan Journal\nAdjustments journal: LOAN--Loan Journal\nLoan fees journal: LOAN--Loan Journal\nInactive journal candidate: INACTIVE-JRNL",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form\n4. Click the Write-offs journal dropdown and review the listed options; repeat for the Adjustments journal and Loan fees journal dropdowns\n5. Confirm that: The Write-offs, Adjustments, and Loan fees journal dropdowns list only active journals; no inactive journal (e.g. INACTIVE-JRNL) appears in any of the three dropdowns.",
+    "The Write-offs, Adjustments, and Loan fees journal dropdowns list only active journals; no inactive journal (e.g. INACTIVE-JRNL) appears in any of the three dropdowns.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 17,
+   "values": [
+    "CFG-003",
+    "Confirm each GL accounts field accepts only active GL accounts on initial Create",
+    "Refer to Common Preconditions above.",
+    "GL account fields checked: Loans receivable, Interest on loans receivable, Allowance for loan loss: Principal, Allowance for loan loss: Interest, Loan fees receivable, Miscellaneous interest income\nInactive GL account candidate: 9999--Inactive Account",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form\n4. Click each GL accounts dropdown in turn (Loans receivable, Interest on loans receivable, Allowance for loan loss: Principal, Allowance for loan loss: Interest, Loan fees receivable, Miscellaneous interest income) and review the listed options\n5. Confirm that: Every GL accounts dropdown lists only active GL accounts; no inactive GL account (e.g. 9999--Inactive Account) appears in any of the six dropdowns.",
+    "Every GL accounts dropdown lists only active GL accounts; no inactive GL account (e.g. 9999--Inactive Account) appears in any of the six dropdowns.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 18,
+   "values": [
+    "CFG-004",
+    "Confirm Default bank account dropdown accepts only active bank accounts on initial Create",
+    "Refer to Common Preconditions above.",
+    "Default bank account dropdown candidates: an active bank account, an inactive bank account",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form and go to the Banking section\n4. Click the Default bank account dropdown and review the listed options\n5. Confirm that: The Default bank account dropdown lists only active bank accounts; no inactive bank account appears.",
+    "The Default bank account dropdown lists only active bank accounts; no inactive bank account appears.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 19,
+   "values": [
+    "CFG-005",
+    "Confirm mandatory fields are enforced when saving the initial configuration",
+    "Refer to Common Preconditions above.",
+    "Loans receivable GL account: (leave blank)\nAll other required Journals/GL accounts fields: (leave blank)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form\n4. Leave the required Journals and GL accounts fields (e.g. Loans receivable) blank\n5. Click the 'Save' button\n6. Confirm that: A validation error appears identifying the missing required field(s) (e.g. Loans receivable is required), and the configuration is not saved until all required fields are provided.",
+    "A validation error appears identifying the missing required field(s) (e.g. Loans receivable is required), and the configuration is not saved until all required fields are provided.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 20,
+   "values": [
+    "CFG-006",
+    "Confirm 'Enable negative interest balances' is unchecked by default and can be enabled on initial Create",
+    "Refer to Common Preconditions above.",
+    "Enable negative interest balances: unchecked (default), then checked",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form and go to the Enable functionality section\n4. Observe the default state of the 'Enable negative interest balances' checkbox\n5. Check the 'Enable negative interest balances' checkbox and click the 'Save' button\n6. Confirm that: The checkbox is unchecked by default; checking it and saving persists the setting as enabled on the View page.",
+    "The checkbox is unchecked by default; checking it and saving persists the setting as enabled on the View page.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 21,
+   "values": [
+    "CFG-007",
+    "Select Method = Standard on initial Create and confirm Presentment method and Recurring schedule fields appear",
+    "Refer to Common Preconditions above.",
+    "Method: Standard",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form and go to the Interest, invoice, and statement generation settings section\n4. Select Method = Standard\n5. Confirm that: Selecting Method = Standard reveals the Presentment method and Recurring schedule (Loan invoice repeats / Loan statement repeats) fields consistent with Standard automation configuration.",
+    "Selecting Method = Standard reveals the Presentment method and Recurring schedule (Loan invoice repeats / Loan statement repeats) fields consistent with Standard automation configuration.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 22,
+   "values": [
+    "CFG-008",
+    "Select Method = Month-end on initial Create and confirm First statement date field appears and is required",
+    "Refer to Common Preconditions above.",
+    "Method: Month-end\nFirst statement date: (leave blank)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form and go to the Interest, invoice, and statement generation settings section\n4. Select Method = Month-end and observe the form for the First statement date field\n5. Leave First statement date blank and click the 'Save' button\n6. Confirm that: Selecting Method = Month-end reveals the First statement date field, marked as required, and saving without a First statement date is blocked with a validation error stating First statement date is required.",
+    "Selecting Method = Month-end reveals the First statement date field, marked as required, and saving without a First statement date is blocked with a validation error stating First statement date is required.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 23,
+   "values": [
+    "CFG-009",
+    "Save the initial Lending Management configuration with valid values for every field",
+    "Refer to Common Preconditions above.",
+    "Write-offs journal: LOAN--Loan Journal\nAdjustments journal: LOAN--Loan Journal\nLoan fees journal: LOAN--Loan Journal\nLoans receivable: 4000--Sales\nInterest on loans receivable: 7503--Loan Interest\nAllowance for loan loss: Principal: 1905--Employee Loans\nAllowance for loan loss: Interest: 7513--Loan Interest Expense\nLoan fees receivable: 6104--Directors Sitting Fees\nMiscellaneous interest income: 7002--Miscellaneous Interest Income\nDefault bank account: (blank)\nMethod: Month-end\nFirst statement date: 11/01/2024",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the initial Create configuration form\n4. Enter the Write-offs, Adjustments, and Loan fees journals, all six GL accounts, Method = Month-end and First statement date = 11/01/2024 as listed in Test Data\n5. Click the 'Save' button\n6. Confirm that: The configuration saves successfully; the page redirects to the View page and displays all saved values under Journals, GL accounts, Banking, Enable functionality, and Interest/invoice/statement generation settings.",
+    "The configuration saves successfully; the page redirects to the View page and displays all saved values under Journals, GL accounts, Banking, Enable functionality, and Interest/invoice/statement generation settings.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 24,
+   "values": [
+    "CFG-010",
+    "Confirm the page title/heading on the initial Lending Management Configuration setup page",
+    "Refer to Common Preconditions above. The Lending Management module has not yet been configured (no configuration record exists).",
+    "Navigation: Applications > Lending Management > Configuration (no configuration saved yet)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration before any configuration has been saved\n3. Observe the page title/heading\n4. Confirm that: The page title/heading clearly identifies the page as the Lending Management configuration setup page (consistent with the module/feature naming used elsewhere in Lending Management, e.g. 'Lending Management Configuration'), and is not blank, generic, or mismatched.",
+    "The page title/heading clearly identifies the page as the Lending Management configuration setup page (consistent with the module/feature naming used elsewhere in Lending Management, e.g. 'Lending Management Configuration'), and is not blank, generic, or mismatched.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 25,
+   "values": [
+    "View and Edit configuration  (9 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 26,
+   "values": [
+    "CFG-011",
+    "Confirm the View page displays all sections with the saved configuration values",
+    "Refer to Common Preconditions above. The Lending Management configuration has already been saved.",
+    "Write-offs journal: LOAN--Loan Journal\nLoans receivable: 4000--Sales\nMethod: Month-end\nFirst statement date: 11/01/2024",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the Lending Management configuration View page\n4. Expand and inspect the Journals, GL accounts, Banking, Enable functionality, and Interest/invoice/statement generation settings sections\n5. Confirm that: All sections are present and collapsible/expandable, each displaying the previously saved values (Write-offs/Adjustments/Loan fees journals, all six GL accounts, Default bank account, Enable negative interest balances, Method, and the recurrence/presentment or First statement date fields matching the saved Method).",
+    "All sections are present and collapsible/expandable, each displaying the previously saved values (Write-offs/Adjustments/Loan fees journals, all six GL accounts, Default bank account, Enable negative interest balances, Method, and the recurrence/presentment or First statement date fields matching the saved Method).",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 27,
+   "values": [
+    "CFG-012",
+    "Confirm all reference fields on the View page are drillable links",
+    "Refer to Common Preconditions above.",
+    "Write-offs journal: LOAN--Loan Journal\nLoans receivable: 4000--Sales",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the View page for the saved configuration\n4. Click the Write-offs journal link\n5. Return to the View page and click the Loans receivable GL account link\n6. Confirm that: Each reference field renders as a green drillable link, and clicking it navigates to the corresponding journal or GL account record.",
+    "Each reference field renders as a green drillable link, and clicking it navigates to the corresponding journal or GL account record.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 28,
+   "values": [
+    "CFG-013",
+    "Confirm the Method field is displayed as read-only (not editable) once the configuration has been saved",
+    "Refer to Common Preconditions above. The Lending Management configuration has already been saved with a chosen Method.",
+    "Method: Month-end (already saved)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the saved configuration's Edit page\n4. Inspect the Method radio group (Standard / Month-end)\n5. Confirm that: The Method field is displayed as read-only / disabled on the Edit form; its previously saved value cannot be changed to the other option.",
+    "The Method field is displayed as read-only / disabled on the Edit form; its previously saved value cannot be changed to the other option.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    "Method is a one-time choice locked at initial setup, matching the Loan Type Automation Method lock."
+   ]
+  },
+  {
+   "row": 29,
+   "values": [
+    "CFG-014",
+    "Confirm attempting to change Method via a direct/bypassed request is rejected",
+    "Refer to Common Preconditions above. The configuration has already been saved with Method = Month-end.",
+    "Saved Method: Month-end\nAttempted Method change: Standard (via direct/bypassed API request)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Confirm the configuration is saved with Method = Month-end\n4. Submit a configuration update via a direct request (bypassing the disabled UI control) that attempts to change Method from Month-end to Standard\n5. Confirm that: The update is rejected with a validation error stating the Method field cannot be changed once set; the saved Method value remains unchanged.",
+    "The update is rejected with a validation error stating the Method field cannot be changed once set; the saved Method value remains unchanged.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 30,
+   "values": [
+    "CFG-015",
+    "Edit and save Journals and GL accounts fields, confirming only active values remain selectable",
+    "Refer to Common Preconditions above. The configuration has already been saved.",
+    "Loans receivable: change from 4000--Sales to a different active GL account\nInactive GL account candidate: 9999--Inactive Account",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the saved configuration's Edit page\n4. Change the Loans receivable GL account to a different active GL account\n5. Open another GL account dropdown and attempt to select the inactive GL account (9999--Inactive Account)\n6. Click the 'Save' button for the valid change\n7. Confirm that: The valid active GL account change saves successfully; the inactive GL account is not selectable/is excluded from the dropdown during edit, consistent with Create-time behavior.",
+    "The valid active GL account change saves successfully; the inactive GL account is not selectable/is excluded from the dropdown during edit, consistent with Create-time behavior.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 31,
+   "values": [
+    "CFG-016",
+    "Edit and save the Default bank account and Enable negative interest balances settings",
+    "Refer to Common Preconditions above. The configuration has already been saved.",
+    "Default bank account: change to a different active bank account\nEnable negative interest balances: toggle from unchecked to checked",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the saved configuration's Edit page\n4. Change the Default bank account to a different active bank account and check 'Enable negative interest balances'\n5. Click the 'Save' button\n6. Confirm that: Both changes save successfully and are reflected on the View page after saving.",
+    "Both changes save successfully and are reflected on the View page after saving.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 32,
+   "values": [
+    "CFG-017",
+    "Confirm editing First statement date (Month-end) or Presentment method / Recurring schedule (Standard) is possible without affecting the locked Method",
+    "Refer to Common Preconditions above. The configuration has already been saved with a chosen Method.",
+    "Method: Month-end (locked)\nFirst statement date: change from 11/01/2024 to 12/01/2024",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the saved configuration's Edit page\n4. Change First statement date from 11/01/2024 to 12/01/2024 (or, for Standard, change the Presentment method / Recurring schedule fields)\n5. Click the 'Save' button\n6. Confirm that: The date/recurrence-related field updates successfully while the Method field remains locked to its original saved value.",
+    "The date/recurrence-related field updates successfully while the Method field remains locked to its original saved value.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 33,
+   "values": [
+    "CFG-018",
+    "Confirm mandatory fields remain enforced when editing the saved configuration",
+    "Refer to Common Preconditions above. The configuration has already been saved.",
+    "Loans receivable: cleared/left blank",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the saved configuration's Edit page\n4. Clear the Loans receivable field\n5. Click the 'Save' button\n6. Confirm that: A validation error appears stating the required field cannot be left blank, and the change is not saved, consistent with Create-time validation.",
+    "A validation error appears stating the required field cannot be left blank, and the change is not saved, consistent with Create-time validation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 34,
+   "values": [
+    "CFG-019",
+    "Confirm the page title/heading on the Lending Management Configuration View and Edit pages",
+    "Refer to Common Preconditions above. A Lending Management configuration record has already been saved.",
+    "Navigation: Applications > Lending Management > Configuration (saved configuration record exists)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Open the saved configuration in View mode and observe the page title/heading\n4. Click 'Edit' and observe the page title/heading in Edit mode\n5. Confirm that: Both the View page and the Edit page display a title/heading that clearly identifies the page as the Lending Management configuration (consistent with the naming used on the initial setup/Create page), and the heading is not blank, generic, or mismatched between View and Edit.",
+    "Both the View page and the Edit page display a title/heading that clearly identifies the page as the Lending Management configuration (consistent with the naming used on the initial setup/Create page), and the heading is not blank, generic, or mismatched between View and Edit.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 35,
+   "values": [
+    "Automation method (Loan Type field)  (11 test cases)",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "row": 36,
+   "values": [
+    "CFG-020",
+    "Create a Loan Type with Standard automation",
+    "Refer to Common Preconditions above.",
+    "Name: QA Standard Automation Loan Type\nAutomation method: Standard\nFirst statement date: N/A (not applicable to Standard)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create'\n4. Enter 'QA Standard Automation Loan Type' in the Name field and select Automation method = Standard\n5. Complete the remaining required fields and click the 'Save' button\n6. Confirm that: The loan type is created successfully with the Automation method saved as Standard.",
+    "The loan type is created successfully with the Automation method saved as Standard.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 37,
+   "values": [
+    "CFG-021",
+    "Create a Loan Type with Month end automation",
+    "Refer to Common Preconditions above.",
+    "Name: QA Month End Automation Loan Type\nAutomation method: Month end\nFirst statement date: 2026-09-01",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create'\n4. Enter 'QA Month End Automation Loan Type' in the Name field and select Automation method = Month end\n5. Enter First statement date = 2026-09-01, complete the remaining required fields, and click the 'Save' button\n6. Confirm that: The loan type is created successfully with the Automation method saved as Month end and the First statement date saved as entered.",
+    "The loan type is created successfully with the Automation method saved as Month end and the First statement date saved as entered.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 38,
+   "values": [
+    "CFG-022",
+    "Hide First statement date when Standard automation is selected",
+    "Refer to Common Preconditions above.",
+    "Automation method: Standard",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create'\n4. Select Automation method = Standard\n5. Confirm that: The First statement date field is not displayed on the form when Standard automation is selected.",
+    "The First statement date field is not displayed on the form when Standard automation is selected.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 39,
+   "values": [
+    "CFG-023",
+    "Show First statement date when Month end automation is selected",
+    "Refer to Common Preconditions above.",
+    "Automation method: Month end",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create'\n4. Select Automation method = Month end\n5. Confirm that: The First statement date field is displayed on the form when Month end automation is selected.",
+    "The First statement date field is displayed on the form when Month end automation is selected.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 40,
+   "values": [
+    "CFG-024",
+    "Require First statement date as mandatory when Month end automation is selected",
+    "Refer to Common Preconditions above.",
+    "Automation method: Month end\nFirst statement date field: displayed, expected to be marked required",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create'\n4. Select Automation method = Month end\n5. Inspect the First statement date field for a mandatory-field indicator (red asterisk)\n6. Confirm that: The First statement date field is marked as mandatory when Month end automation is selected.",
+    "The First statement date field is marked as mandatory when Month end automation is selected.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 41,
+   "values": [
+    "CFG-025",
+    "Block saving a Loan Type when Month end automation is selected and First statement date is not provided",
+    "Refer to Common Preconditions above.",
+    "Automation method: Month end\nFirst statement date: (leave blank)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Click '+Create'\n4. Select Automation method = Month end and leave the First statement date field blank\n5. Click the 'Save' button\n6. Confirm that: The save is blocked and a validation error appears stating First statement date is required when Month end automation is selected.",
+    "The save is blocked and a validation error appears stating First statement date is required when Month end automation is selected.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 42,
+   "values": [
+    "CFG-026",
+    "Prevent updating the Automation method after the Loan Type has been saved",
+    "Refer to Common Preconditions above. An existing Loan Type has already been saved with a chosen Automation method.",
+    "Existing loan type: QA Month End Automation Loan Type\nSaved automation method: Month end",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing loan type 'QA Month End Automation Loan Type' Edit page\n4. Inspect the Automation method field and attempt to change its value\n5. Confirm that: The Automation method field is not editable (read-only or disabled) once the loan type has been saved; the value cannot be updated after initial creation.",
+    "The Automation method field is not editable (read-only or disabled) once the loan type has been saved; the value cannot be updated after initial creation.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 43,
+   "values": [
+    "CFG-027",
+    "Block clearing First statement date when editing an existing Month end automation Loan Type",
+    "Refer to Common Preconditions above. An existing record is available to edit.",
+    "Existing loan type: QA Month End Automation Loan Type\nSaved automation method: Month end\nFirst statement date: cleared/left blank",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Loan type\n3. Open the existing loan type 'QA Month End Automation Loan Type' Edit page\n4. Clear the First statement date field\n5. Click the 'Save' button\n6. Confirm that: The First statement date field remains displayed and mandatory, and a validation error appears stating First statement date is required, blocking the save.",
+    "The First statement date field remains displayed and mandatory, and a validation error appears stating First statement date is required, blocking the save.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 44,
+   "values": [
+    "CFG-028",
+    "Reject setup references that do not resolve to active journals or GL accounts",
+    "Refer to Common Preconditions above.",
+    "Write-off journal: INVALID-KEY-999\nLoan receivable account: inactive GL account (e.g. 9999--Inactive Account)",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Submit a configuration setup via API using Write-off journal = 'INVALID-KEY-999' (a non-existent key) and Loan receivable account = an inactive GL account\n4. Confirm that: The API request is rejected with the applicable not-found (for the invalid journal key) and inactive-record validation errors, and no configuration is persisted.",
+    "The API request is rejected with the applicable not-found (for the invalid journal key) and inactive-record validation errors, and no configuration is persisted.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 45,
+   "values": [
+    "CFG-029",
+    "Standard automation uses recurring-job scheduling while legacy schedule/post endpoints return successful no-op",
+    "Refer to Common Preconditions above.",
+    "Automation method: Standard\nSchedule time: 02:00",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Confirm the configuration is saved with Automation method = Standard and Schedule time = 02:00\n4. Invoke the schedule-recurring-jobs endpoint/action, then invoke the legacy schedule-jobs and post-jobs endpoints/actions\n5. Confirm that: Recurring job groups are returned for Standard automation, and the legacy schedule-jobs/post-jobs endpoints complete successfully as a no-op without creating month-end runs.",
+    "Recurring job groups are returned for Standard automation, and the legacy schedule-jobs/post-jobs endpoints complete successfully as a no-op without creating month-end runs.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  },
+  {
+   "row": 46,
+   "values": [
+    "CFG-030",
+    "Month-end and legacy-null automation retain statement-run processing",
+    "Refer to Common Preconditions above.",
+    "Automation method: Month end\nScheduled date: 2026-09-01",
+    "1. Sign in to Sage Intacct application\n2. Navigate to Applications > Lending Management > Configuration\n3. Confirm the configuration is saved with Automation method = Month end and Scheduled date = 2026-09-01\n4. Invoke the month-end schedule job, then the post job flow, for the prior period\n5. Confirm that: A statement run for the prior period is created and posted successfully through the month-end flow.",
+    "A statement run for the prior period is created and posted successfully through the month-end flow.",
+    "IADSSL-101",
+    "No",
+    "Not Executed",
+    null
+   ]
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+# Secrets / environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editor / tool state
+.vscode/
+.idea/
+.codex/
+.codex-work/
+.agents/
+.tmp/
+
+# Playwright / test artifacts
+.playwright-mcp/
+screenshots/
+reports/
+outputs/

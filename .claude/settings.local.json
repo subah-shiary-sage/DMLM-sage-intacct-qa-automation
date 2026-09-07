@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($paths = @\\(\"$env:LOCALAPPDATA\\\\Programs\\\\Python\\\\Python310\\\\python.exe\",\"$env:LOCALAPPDATA\\\\Programs\\\\Python\\\\Python311\\\\python.exe\",\"$env:LOCALAPPDATA\\\\Programs\\\\Python\\\\Python312\\\\python.exe\"\\); foreach\\($p in $paths\\){ if\\(Test-Path $p\\){ Write-Output \"FOUND: $p\"; & $p --version } }; Get-Command py -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source)",
+      "mcp__playwright-mcp__*",
+      "mcp__playwright__*",
+      "Bash(*)",
+      "Bash(powershell*)",
+      "Bash(powershell.exe*)",
+      "Bash(sed 's#src/test/resources/features/rest-api/snl/#features/snl/#g' /c/Users/sushiary/AppData/Local/Temp/claude/c--Users-sushiary-OneDrive---Sage-Software--Inc-Documents-Sage-intacct-automation---MCP/4ffa6f22-28d4-45a3-8fb7-b2a0898d2afe/scratchpad/1336-snl-only.diff)",
+      "Read(//c/Users/sushiary/AppData/Local/Temp/claude/c--Users-sushiary-OneDrive---Sage-Software--Inc-Documents-Sage-intacct-automation---MCP/4ffa6f22-28d4-45a3-8fb7-b2a0898d2afe/scratchpad/**)"
+    ]
+  }
+}
