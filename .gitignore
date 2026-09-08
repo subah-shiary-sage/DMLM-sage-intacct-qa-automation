@@ -28,3 +28,10 @@ node_modules/
 # Claude scratch
 .claude/scratch/
 *.inspect.ndjson
+
+# Regenerated per-run evidence (regression_automation writes these fresh each
+# run; the durable record is the JIRA comment + the tracked summary report).
+# Existing committed screenshots stay as historical evidence — this only
+# stops new run output from being tracked going forward.
+Regression/_run_screenshots/*
+!Regression/_run_screenshots/.gitkeep
