@@ -21,3 +21,10 @@ __pycache__/
 screenshots/
 reports/
 outputs/
+
+# Node
+node_modules/
+
+# Claude scratch
+.claude/scratch/
+*.inspect.ndjson
