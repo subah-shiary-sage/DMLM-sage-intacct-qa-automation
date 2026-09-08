@@ -13,13 +13,8 @@ from typing import Optional
 
 from playwright.sync_api import Locator, Page, FrameLocator
 
-# Sage Intacct embeds all application content inside this iframe.
-IFRAME = "iframe#iamain"
-
-# The delete confirmation modal is located by this body text — its
-# [role="dialog"] wrapper has a zero-size bounding box, so visibility-based
-# locators don't work on it.
-DELETE_DIALOG_TEXT = "will be permanently deleted"
+from . import locators
+from .locators import DELETE_DIALOG_TEXT, IFRAME
 
 
 class BasePage:
@@ -150,7 +145,7 @@ class BasePage:
         header trigger is visible, so the ``:visible`` filter targets it
         deterministically.
         """
-        self.frame.locator('[aria-label="More actions"]:visible').first.click()
+        self.frame.locator(f'{locators.MORE_ACTIONS_BTN}:visible').first.click()
         self.page.wait_for_timeout(500)
 
     def _action_locator(self, name: str) -> Locator:
@@ -189,7 +184,7 @@ class BasePage:
         against stale, unmounted instances left by earlier tests on a
         session-scoped page.
         """
-        return self.frame.locator('[role="dialog"]').filter(has_text=match_text).last
+        return self.frame.locator(locators.DIALOG).filter(has_text=match_text).last
 
     def get_delete_modal_title(self, match_text: str = DELETE_DIALOG_TEXT) -> str:
         return self.delete_dialog(match_text).get_by_role("heading").first.inner_text()
@@ -235,7 +230,7 @@ class BasePage:
 
     def get_toast_message(self) -> str:
         """Returns the text of the first visible toast / alert notification."""
-        return self.frame.locator('[role="alert"], .toast, .notification').first.inner_text()
+        return self.frame.locator(f'{locators.ALERT_OR_STATUS}, .toast, .notification').first.inner_text()
 
     # ── Heading / title ─────────────────────────────────────────────────────────
 

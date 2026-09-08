@@ -18,6 +18,7 @@ Selectors captured against the live app 2026-08-17
   - Column filters ........ two input[placeholder="Contains"] (Name, Document sequence)
 """
 
+from .. import locators
 from ..listing_page import ListingPage
 
 
@@ -35,7 +36,7 @@ class LoanCategoryListingPage(ListingPage):
 
     def _doc_seq_filter(self):
         """The Document sequence column filter — the second 'Contains' box."""
-        return self.frame.locator('input[placeholder="Contains"]').nth(1)
+        return self.frame.locator(locators.CONTAINS_FILTER).nth(1)
 
     def search_by_document_sequence(self, value: str):
         box = self._doc_seq_filter()

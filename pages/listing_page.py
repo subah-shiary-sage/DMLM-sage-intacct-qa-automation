@@ -23,6 +23,7 @@ directly when navigation doesn't fit the module-list pattern.
 
 from typing import Optional
 
+from . import locators
 from .base_page import BasePage
 
 
@@ -31,7 +32,7 @@ class ListingPage(BasePage):
     LIST_HEADING: str = ""
     CREATE_HEADING: Optional[str] = None
     VIEW_HEADING: str = ""
-    CREATE_BTN = '[aria-label="Create"]'
+    CREATE_BTN = locators.CREATE_BTN
 
     MODULE_LABEL: str = ""
     HREF_FRAGMENT: str = ""
@@ -64,7 +65,7 @@ class ListingPage(BasePage):
     def _name_filter(self):
         """The primary Name/text column filter. Override where the DOM needs
         a more specific selector (aria-label, position among several filters)."""
-        return self.frame.locator('input[placeholder="Contains"]').first
+        return self.frame.locator(locators.CONTAINS_FILTER).first
 
     def search_by_name(self, name: str, settle_ms: int = 1_500):
         box = self._name_filter()
@@ -140,7 +141,7 @@ class ListingPage(BasePage):
         BasePage.delete_dialog) it doesn't reliably carry confirmation text
         to filter on.
         """
-        return self.frame.locator('[role="dialog"]').last
+        return self.frame.locator(locators.DIALOG).last
 
     def select_first_row(self, settle_ms: int = 500):
         self.frame.get_by_role("checkbox", name="Select row").first.check()
@@ -170,5 +171,5 @@ class ListingPage(BasePage):
     # ── Toast / notification ────────────────────────────────────────────────────
 
     def toast_text(self) -> str:
-        el = self.frame.locator('[role="alert"], [role="status"]')
+        el = self.frame.locator(locators.ALERT_OR_STATUS)
         return el.first.inner_text().strip() if el.count() else ""
