@@ -14,33 +14,19 @@ Selectors verified against live DOM 2026-08-17 (release www-p303, LME entity):
   - Setup menu link href contains: loan-account.list
 """
 
-from ..base_page import BasePage
+from ..listing_page import ListingPage
 
 
-class LoanAccountListingPage(BasePage):
+class LoanAccountListingPage(ListingPage):
 
     LIST_HEADING = "Loans"
+    CREATE_HEADING = "Create loan"
+    VIEW_HEADING = "Loan:"
+    MODULE_LABEL = "Lending Management"
+    HREF_FRAGMENT = "loan-account.list"
 
-    # ── Navigation ─────────────────────────────────────────────────────────────
-
-    def navigate_to_list(self):
-        """Open Lending Management → All → Loan account."""
-        self.navigate_to_module_list(
-            module_label="Lending Management",
-            href_fragment="loan-account.list",
-            list_heading=self.LIST_HEADING,
-        )
-
-    # ── Actions ────────────────────────────────────────────────────────────────
-
-    CREATE_BTN = '[aria-label="Create"]'
-
-    def click_create(self):
-        """Click Create and wait for the create form."""
-        self.frame.locator(self.CREATE_BTN).first.click()
-        self.frame.get_by_role(
-            "heading", name="Create loan"
-        ).wait_for(timeout=15_000)
+    # This list is keyed by Account number / Account name rather than a
+    # single "Name" column, so filtering and record lookup are overridden.
 
     def _account_number_filter(self):
         """The Account number text filter column."""
@@ -72,18 +58,16 @@ class LoanAccountListingPage(BasePage):
         box.press("Enter")
         self.page.wait_for_timeout(1_000)
 
-    def open_record_by_account_number(self, account_number: str):
+    def open_record_by_account_number(self, account_number: str, timeout: int = 15_000):
         """Click a record's Account number link and wait for its View page
         (auto-searches if needed)."""
         link = self.frame.get_by_role("link", name=account_number, exact=True)
         if not link.first.is_visible():
             self.search_by_account_number(account_number)
         link.first.click()
-        self.frame.get_by_role(
-            "heading", name="Loan:"
-        ).wait_for(timeout=15_000)
+        self.frame.get_by_role("heading", name=self.VIEW_HEADING).wait_for(timeout=timeout)
 
-    def open_record_by_account_name(self, account_name: str):
+    def open_record_by_account_name(self, account_name: str, timeout: int = 15_000):
         """
         Click a record's row via its Account name (auto-searches by name if
         needed). Account name is the field tests fully control (unique per
@@ -96,37 +80,10 @@ class LoanAccountListingPage(BasePage):
         self.search_by_account_name(account_name)
         row = self.frame.locator('[role="row"]').filter(has_text=account_name).first
         row.get_by_role("link").first.click()
-        self.frame.get_by_role("heading", name="Loan:").wait_for(timeout=15_000)
+        self.frame.get_by_role("heading", name=self.VIEW_HEADING).wait_for(timeout=timeout)
 
     def is_record_visible(self, account_number: str) -> bool:
         return self.frame.get_by_role("link", name=account_number, exact=True).count() > 0
 
     def is_record_visible_by_name(self, account_name: str) -> bool:
         return self.frame.locator('[role="row"]').filter(has_text=account_name).count() > 0
-
-    def wait_for_list_page(self):
-        self.frame.get_by_role("heading", name=self.LIST_HEADING).wait_for(timeout=10_000)
-
-    # ── List-page inspection helpers ────────────────────────────────────────────
-
-    def get_column_headers(self) -> list[str]:
-        headers = self.frame.get_by_role("columnheader").all()
-        return [h.inner_text().strip() for h in headers]
-
-    def is_create_visible(self) -> bool:
-        return self.frame.locator(self.CREATE_BTN).first.is_visible()
-
-    def bulk_delete_button(self):
-        return self.frame.get_by_role("button", name="Delete").first
-
-    def select_first_row(self):
-        self.frame.get_by_role("checkbox", name="Select row").first.check()
-        self.page.wait_for_timeout(500)
-
-    def select_all_rows(self):
-        self.frame.get_by_role("checkbox", name="Select all").first.check()
-        self.page.wait_for_timeout(500)
-
-    def get_items_count_text(self) -> str:
-        """The footer 'N items' text."""
-        return self.frame.get_by_text("items", exact=False).first.inner_text()
